@@ -1,0 +1,32 @@
+name: "Generate Thesis"
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  generate-thesis:
+    runs-on: ubuntu-latest
+    container: 
+      image: ghcr.io/chriskar96/ubuntu-latex-docker-image:main
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install packages
+        run: apt-get -qq update && apt-get install --no-install-recommends -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-fonts-extra-links texlive-font-utils texlive-plain-generic texlive-xetex texlive-lang-greek texlive-science texlive-bibtex-extra biber lmodern ghostscript
+      - name: Generate pdf
+        run: .github/workflows/generate.sh thesis
+      - name: Generate printable pdf
+        run: .github/workflows/generate.sh thesis-printable
+      - name: Publish pdf
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          automatic_release_tag: "latest"
+          prerelease: false
+          files: |
+            christos-karamolegkos-thesis.pdf
+            christos-karamolegkos-thesis-printable.pdf
+          repo_token: ${{ secrets.GITHUB_TOKEN }}

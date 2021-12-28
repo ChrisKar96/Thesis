@@ -1,0 +1,108 @@
+\begin{titlepage}
+	\begin{center}
+		\begin{figure}[h]
+			\centering \includegraphics[scale=0.25]{ece.png}
+		\end{figure}
+		{\LARGE Πανεπιστήμιο Δυτικής Μακεδονίας\\}
+		{\Large Τμήμα Ηλεκτρολόγων Μηχανικών \& Μηχανικών Υπολογιστών}
+		
+		\begin{center}
+			% leave 2 cm from above text
+			\vspace{2cm}
+			
+			\HRule \\[0.4cm]
+			{\huge Σχεδίαση και υλοποίηση πληροφοριακού συστήματος ανοιχτού κώδικα για διαχείριση εκκίνησης υπολογιστών μέσω δικτύου\\}
+			\HRule \\[0.4cm]
+		\end{center}
+		
+		% put this on the bottom
+		\vfill
+		\begin{doublespacing}
+			
+			{\LARGE 
+				Χρήστος Καραμολέγκος\\}
+			{\Large Επιβλέπων Καθηγητής : Δρ. Μηνάς Δασυγένης\\}
+			\vfill 
+			{\Large \today}
+		\end{doublespacing}
+	\end{center}
+\end{titlepage}
+
+% insert blank page after title page
+\blankpage
+
+\begin{titlepage}
+	\begin{center}
+		\begin{figure}[h]
+			\centering \includegraphics[scale=0.25]{ece.png}
+		\end{figure}
+		{\LARGE University of Western Macedonia\\}
+		{\Large Department of Electrical \& Computer Engineering}
+		
+		\begin{center}
+			% leave 2 cm from above text
+			\vspace{2cm}
+			
+			\HRule \\[0.4cm]
+			{\huge Design and implementation of an open-source platform for managing computer booting over a network\\}
+			\HRule \\[0.4cm]
+		\end{center}
+		
+		% put this on the bottom
+		\vfill
+		\begin{doublespacing}
+			
+			{\LARGE 
+				Christos Karamolegkos\\}
+			{\Large Επιβλέπων Καθηγητής : Dr. Minas Dasygenis\\}
+			\vfill 
+			{\Large \today}
+		\end{doublespacing}
+	\end{center}
+\end{titlepage}
+
+% insert blank page after title page
+\afterpage{\blankpage}
+
+\pagenumbering{roman}
+
+% Insert copyright
+\chapter*{Δήλωση Πνευματικών Δικαιωμάτων}
+
+\noindent{Copyright (C) Χρήστος Καραμολέγκος \& Μηνάς Δασυγένης, 2021, Κοζάνη}
+
+\include{Abstract/Abstract-gr}
+\include{Abstract/Abstract-eng}
+
+% insert table of contents
+\newpage\tableofcontents
+
+% insert list of figures
+\listoffigures
+\clearpage
+
+% insert list of algorithms
+%\listofalgorithms
+%\clearpage
+
+% insert list of tables
+\listoftables
+\clearpage
+
+% insert list of listings
+\lstlistoflistings
+\clearpage
+
+\pagenumbering{arabic}
+
+\include{Chapters/1-Introduction}
+
+\include{Chapters/2-Theoretical-Background}
+
+\begin{appendices}
+
+\end{appendices}
+
+{\footnotesize
+	\printbibliography[title={Βιβλιογραφία}]
+}
