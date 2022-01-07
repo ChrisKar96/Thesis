@@ -19,7 +19,7 @@
 % subsection title appearance format
 \titleformat{\subsection}
 {\bfseries\normalsize}{\thesubsection}{12pt}{}
-\usepackage{geometry}
+\usepackage[a4paper]{geometry}
 
 % xelatex wants fontspec
 \usepackage{fontspec}
