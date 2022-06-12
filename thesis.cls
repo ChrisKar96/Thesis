@@ -33,6 +33,7 @@
 \graphicspath{{Figures/}{./}} % Specifies where to look for included images
 \usepackage{setspace}
 
+\usepackage{csquotes}
 \usepackage[english,greek]{babel}
 
 % Use biblatex for bibliography
@@ -125,6 +126,9 @@
 % use fancy header and footer
 \usepackage{fancyhdr}
 \usepackage{blindtext} % to quickly get a full document
+
+% use longtable for db tables
+\usepackage{longtable}
 
 % Turn on the style
 \pagestyle{fancy}
