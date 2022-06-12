@@ -33,6 +33,8 @@
 \graphicspath{{Figures/}{./}} % Specifies where to look for included images
 \usepackage{setspace}
 
+\usepackage[english,greek]{babel}
+
 % Use biblatex for bibliography
 \usepackage{biblatex} 
 \addbibresource{refs.bib}
@@ -68,7 +70,7 @@
 \renewcommand{\lstlistingname}{Απεικόνιση}
 
 % change listings name in contents page to Κατάλογος απεικονήσεων
-\renewcommand\lstlistlistingname{Κατάλογος απεικονίσεων}
+\renewcommand\lstlistlistingname{Κατάλογος Απεικονίσεων}
 
 % set custom colorscheme for listings with language=lang1 to make them stand out more
 % http://tex.stackexchange.com/questions/83085/how-to-improve-listings-display-of-json-files

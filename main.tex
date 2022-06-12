@@ -1,3 +1,4 @@
+\selectlanguage{greek}
 \begin{titlepage}
 	\begin{center}
 		\begin{figure}[h]
@@ -21,7 +22,7 @@
 			
 			{\LARGE 
 				Χρήστος Καραμολέγκος\\}
-			{\Large Επιβλέπων Καθηγητής : Δρ. Μηνάς Δασυγένης\\}
+			{\Large Επιβλέπων Καθηγητής: Δρ. Μηνάς Δασυγένης\\}
 			\vfill 
 			{\Large \today}
 		\end{doublespacing}
@@ -31,6 +32,7 @@
 % insert blank page after title page
 \blankpage
 
+\selectlanguage{english}
 \begin{titlepage}
 	\begin{center}
 		\begin{figure}[h]
@@ -54,25 +56,27 @@
 			
 			{\LARGE 
 				Christos Karamolegkos\\}
-			{\Large Επιβλέπων Καθηγητής : Dr. Minas Dasygenis\\}
-			\vfill 
+			{\Large Supervisor: Dr. Minas Dasygenis\\}
+			\vfill
 			{\Large \today}
 		\end{doublespacing}
 	\end{center}
 \end{titlepage}
-
 % insert blank page after title page
 \afterpage{\blankpage}
 
+\selectlanguage{greek}
+
 \pagenumbering{roman}
 
-% Insert copyright
-\chapter*{Δήλωση Πνευματικών Δικαιωμάτων}
+% Insert copyright note
+\include{Copyright/Copyright.tex}
 
-\noindent{Copyright (C) Χρήστος Καραμολέγκος \& Μηνάς Δασυγένης, 2021, Κοζάνη}
-
+% Insert abstract in greek and english
 \include{Abstract/Abstract-gr}
+\selectlanguage{english}
 \include{Abstract/Abstract-eng}
+\selectlanguage{greek}
 
 % insert table of contents
 \newpage\tableofcontents
