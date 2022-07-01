@@ -1,6 +1,7 @@
-\LoadClass{report}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{thesis}[2021/12/28 My thesis class]
+\ProvidesClass{thesis}[2022/07/01 My thesis class]
+
+\LoadClass{report}
 
 % TEXT FORMATTING
 % set spacing between lines (διάστιχο)
@@ -20,6 +21,10 @@
 \titleformat{\subsection}
 {\bfseries\normalsize}{\thesubsection}{12pt}{}
 \usepackage[a4paper]{geometry}
+
+% TABLE CELL PADDING
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.6}% for the vertical padding
 
 % xelatex wants fontspec
 \usepackage{fontspec}
