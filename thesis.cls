@@ -42,7 +42,12 @@
 \usepackage[english,greek]{babel}
 
 % Use biblatex for bibliography
-\usepackage{biblatex} 
+\usepackage[
+    backend=biber, 
+    natbib=true,
+    style=numeric,
+    sorting=none
+]{biblatex}
 \addbibresource{refs.bib}
 
 % Caption customization
