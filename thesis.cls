@@ -49,6 +49,7 @@
     sorting=none
 ]{biblatex}
 \addbibresource{refs.bib}
+\addbibresource{figures.bib}
 
 % Caption customization
 % use this package to set appearance for captions
