@@ -26,6 +26,9 @@
 \setlength{\tabcolsep}{0.5em} % for the horizontal padding
 {\renewcommand{\arraystretch}{1.6}% for the vertical padding
 
+% TABLE FLOATING
+\usepackage{placeins}
+
 % xelatex wants fontspec
 \usepackage{fontspec}
 \usepackage{xltxtra}
