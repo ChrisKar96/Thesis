@@ -14,3 +14,4 @@ Each commit triggers a compilation using xelatex and biber, that results in rele
 >1. xelatex
 2. biber
 3. xelatex
+4. xelatex

@@ -9,6 +9,7 @@
 xelatex "$1"
 biber "$1"
 xelatex "$1"
+xelatex "$1"
 
 # exit if unoptimized pdf is not present
 [ -f "$1".pdf ] || exit 1
