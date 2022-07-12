@@ -45,14 +45,7 @@
 \usepackage[english,greek]{babel}
 
 % Use biblatex for bibliography
-\usepackage[
-    backend=biber, 
-    natbib=true,
-    style=numeric,
-    sorting=none
-]{biblatex}
-\addbibresource{refs.bib}
-\addbibresource{figures.bib}
+\usepackage[style=alphabetic,labelnumber,defernumbers,backend=biber]{biblatex}
 
 % Caption customization
 % use this package to set appearance for captions

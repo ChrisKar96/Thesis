@@ -118,5 +118,8 @@
 \end{appendices}
 
 {\footnotesize
-	\printbibliography[title={Βιβλιογραφία}]
+	\begin{refcontext}[sorting=none]{}
+		\printbibliography[title=Βιβλιογραφία, env=bibliographyNUM, resetnumbers, keyword=article]
+		\printbibliography[title=Πηγές Εικόνων, omitnumbers, keyword=figure]
+	\end{refcontext}
 }
