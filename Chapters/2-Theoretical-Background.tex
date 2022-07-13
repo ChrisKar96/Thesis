@@ -73,24 +73,24 @@
 \subsection{HTML}
 Η HTML (Hyper Text Markup Language - Γλώσσα Σήμανσης Υπερκειμένου) αποτελεί την βασική γλώσσα για την κατασκευή ενός ιστοχώρου. Δεν θεωρείται γλώσσα προγραμματισμού, αλλά αποτελεί μία περιγραφική γλώσσα (markup language) η οποία περιέχει οδηγίες προς τους web browsers. Οι web browsers αφού διαβάσουν τις οδηγίες αυτές, τις μεταφράζουν στις κατάλληλες εντολές για να δημιουργηθεί το οπτικό περιεχόμενο που θα παρουσιαστεί στον χρήστη. Η παραπάνω διαδικασία επιτυγχάνεται με την βοήθεια των HTML elements, τα οποία οριοθετούνται από ετικέτες (tags). Οι ετικέτες είναι γράμματα ή λέξεις, τα οποία περικλείουν γωνιώδεις αγκύλες και υπάρχουν ανά ζεύγη. Χωρίζονται σε tags έναρξης, τα οποία σηματοδοτούν την έναρξη μιας εντολής, και σε tags λήξης, τα οποία σηματοδοτούν την λήξη της εντολής, με μερικές εξαιρέσεις. Οι ετικέτες λήξης διαχωρίζονται από τις ετικέτες έναρξης με μία πλάγια γραμμή '/'. Ένα βασικό παράδειγμα ετικέτας είναι το: <html>...</html>, ανάμεσα στις ετικέτες περικλείεται κείμενο ή ακόμη και άλλες εσωτερικές ετικέτες (εμφωλευμένα tags). Ορισμένες βασικές ετικέτες παρατίθενται στον πίνακα \ref{tbl:html_basic_elements}.
 
-\begin{table}[h]
-	\caption{Βασικά στοιχεία HTML}
-	\label{tbl:html_basic_elements}
-	\begin{tabular}{|p{0.2\linewidth}|p{0.7\linewidth}|}
-		\hline
-		\textless{}html\textgreater{}...\textless{}/html\textgreater{} & Η αρχή και το τέλος του HTML αρχείου \\ \hline
-		\textless{}!DOCTYPE\textgreater{} & Η οδηγία που καθορίζει την έκδοση της HTML που χρησιμοποιείται \\ \hline
-		\textless{}head\textgreater{}...\textless{}/head\textgreater{} & Οι σχετικές πληροφορίες με το έγγραφο (όπως η γλώσσα, η κωδικοποίηση και τα μεταδεδομένα) \\ \hline
-		\textless{}title\textgreater{}...\textless{}/title\textgreater{} & Ο τίτλος του αρχείου \\ \hline
-		\textless{}body\textgreater{}...\textless{}/body\textgreater{} & Τα οπτικά στοιχεία του αρχείου \\ \hline
-		\textless{}div\textgreater{}...\textless{}/div\textgreater{} & Ομαδοποίηση στοιχείων εντός ετικέτας \\ \hline
-		\textless{}input\textgreater{}...\textless{}/input\textgreater{} & Ορισμός πεδίου εισαγωγής \\ \hline
-		\textless{}!--...--\textgreater{} & Ορισμός σχολίων \\ \hline
-		\textless{}form\textgreater{}...\textless{}/form\textgreater{} & Ορισμός φόρμας \\ \hline
-		\textless{}button\textgreater{}...\textless{}/button\textgreater{} & Ορισμός κουμπιού \\ \hline
-		\textless{}a\textgreater{}...\textless{}/a\textgreater{} & Ορισμός υπερσυνδέσμου \\ \hline
-	\end{tabular}
-\end{table}
+\begin{longtable}{|p{0.2\linewidth}|p{0.7\linewidth}|} 
+	\caption{Βασικά στοιχεία HTML} \label{tbl:html_basic_elements} \\
+	\hline
+	\endfirsthead
+	\caption{Βασικά στοιχεία HTML (συνέχεια)} \\ 
+	\endhead \endfoot 
+	\textless{}html\textgreater{}...\textless{}/html\textgreater{} & Η αρχή και το τέλος του HTML αρχείου \\ \hline
+	\textless{}!DOCTYPE\textgreater{} & Η οδηγία που καθορίζει την έκδοση της HTML που χρησιμοποιείται \\ \hline
+	\textless{}head\textgreater{}...\textless{}/head\textgreater{} & Οι σχετικές πληροφορίες με το έγγραφο (όπως η γλώσσα, η κωδικοποίηση και τα μεταδεδομένα) \\ \hline
+	\textless{}title\textgreater{}...\textless{}/title\textgreater{} & Ο τίτλος του αρχείου \\ \hline
+	\textless{}body\textgreater{}...\textless{}/body\textgreater{} & Τα οπτικά στοιχεία του αρχείου \\ \hline
+	\textless{}div\textgreater{}...\textless{}/div\textgreater{} & Ομαδοποίηση στοιχείων εντός ετικέτας \\ \hline
+	\textless{}input\textgreater{}...\textless{}/input\textgreater{} & Ορισμός πεδίου εισαγωγής \\ \hline
+	\textless{}!--...--\textgreater{} & Ορισμός σχολίων \\ \hline
+	\textless{}form\textgreater{}...\textless{}/form\textgreater{} & Ορισμός φόρμας \\ \hline
+	\textless{}button\textgreater{}...\textless{}/button\textgreater{} & Ορισμός κουμπιού \\ \hline
+	\textless{}a\textgreater{}...\textless{}/a\textgreater{} & Ορισμός υπερσυνδέσμου \\ \hline
+\end{longtable}
 
 \subsection{CSS}
 Η CSS αποτελεί μία γλώσσα επικαλυπτόμενων στυλ μορφοποίησης (Cascading Style Sheets) και όπως η HTML δεν θεωρείται καθαρή γλώσσα προγραμματισμού. Συντελεί στον διαχωρισμό των εντολών εμφάνισης από τις εντολές του περιεχομένου της ιστοσελίδας. Χρησιμοποιείται για τη μορφοποίηση οποιασδήποτε ετικέτας HTLM και τη δημιουργία ενός αποτελέσματος πιο όμορφου οπτικά για τον χρήστη. Η σύνταξη μιας εντολής στην CSS αποτελείται από τρία κύρια στοιχεία: το στοιχείο που θα τροποποιηθεί, τις ιδιότητες του στοιχείου που θα επηρεαστούν και η νέα τιμή των ιδιοτήτων. Στον πίνακα \ref{tbl:css_basic_elements} αναφέρεται ένα παράδειγμα του τρόπου σύνταξης μιας εντολής στην γλώσσα CSS.
@@ -126,23 +126,23 @@
 
 Ορισμένες βασικές συναρτήσεις της PHP παρατίθενται στον πίνακα \ref{tbl:php_basic_functions}.
 
-\begin{table}[h]
-	\caption{Βασικές συναρτήσεις της PHP}
-	\label{tbl:php_basic_functions}
-	\begin{tabular}{|p{0.2\linewidth}|p{0.75\linewidth}|}
-		\hline
-		htmlspecialchars() & Μετατροπή ειδικών χαρακτήρων σε οντότητες HTML \\ \hline
-		explode() & Μετατροπή μιας συμβολοσειράς σε πίνακα με χρήση ενός διαχωριστικού χαρακτήρα \\ \hline
-		rand() & Επιστροφή ενός τυχαίου αριθμού \\ \hline
-		str\_replace() & Εύρεση και αντικατάσταση ενός μοτίβου σε μια συμβολοσειρά \\ \hline
-		date() & Επιστροφή μιας μορφοποιημένης ημερομηνίας \\ \hline
-		strlen() & Επιστροφή του μήκους μιας συμβολοσειράς \\ \hline
-		count() & Επιστροφή του αριθμού των στοιχείων ενός πίνακα \\ \hline
-		array\_unique() & Απαλοιφή διπλότυπων στοιχείων ενός πίνακα \\ \hline
-		print\_r() & Εκτύπωση μεταβλητής \\ \hline
-		echo & Εκτύπωση μίας ή περισσότερων συμβολοσειρών \\ \hline
-	\end{tabular}
-\end{table}
+\begin{longtable}{|p{0.2\linewidth}|p{0.7\linewidth}|} 
+	\caption{Βασικές συναρτήσεις της PHP} \label{tbl:php_basic_functions} \\
+	\hline
+	\endfirsthead
+	\caption{Βασικές συναρτήσεις της PHP (συνέχεια)} \\ 
+	\endhead \endfoot 
+	htmlspecialchars() & Μετατροπή ειδικών χαρακτήρων σε οντότητες HTML \\ \hline
+	explode() & Μετατροπή μιας συμβολοσειράς σε πίνακα με χρήση ενός διαχωριστικού χαρακτήρα \\ \hline
+	rand() & Επιστροφή ενός τυχαίου αριθμού \\ \hline
+	str\_replace() & Εύρεση και αντικατάσταση ενός μοτίβου σε μια συμβολοσειρά \\ \hline
+	date() & Επιστροφή μιας μορφοποιημένης ημερομηνίας \\ \hline
+	strlen() & Επιστροφή του μήκους μιας συμβολοσειράς \\ \hline
+	count() & Επιστροφή του αριθμού των στοιχείων ενός πίνακα \\ \hline
+	array\_unique() & Απαλοιφή διπλότυπων στοιχείων ενός πίνακα \\ \hline
+	print\_r() & Εκτύπωση μεταβλητής \\ \hline
+	echo & Εκτύπωση μίας ή περισσότερων συμβολοσειρών \\ \hline
+\end{longtable}
 
 \subsection{SQL}
 Η Structured Query Language (SQL) \cite{Loshin_2022}, μία τυποποιημένη γλώσσα προγραμματισμού, χρησιμοποιείται για τη διαχείριση σχεσιακών βάσεων δεδομένων και την εκτέλεση διαφόρων πράξεων στα δεδομένα που περιέχουν. Από την ίδρυσή της τη δεκαετία του 1970, η SQL χρησιμοποιείται ευρέως από διαχειριστές βάσεων δεδομένων καθώς και από προγραμματιστές που δημιουργούν σενάρια για την ολοκλήρωση δεδομένων και από αναλυτές δεδομένων που κατασκευάζουν και εκτελούν αναλυτικά ερωτήματα.
