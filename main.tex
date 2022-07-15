@@ -1,3 +1,5 @@
+\pagenumbering{alph}
+
 \selectlanguage{greek}
 \begin{titlepage}
 	\begin{center}
@@ -6,20 +8,18 @@
 		\end{figure}
 		{\LARGE Πανεπιστήμιο Δυτικής Μακεδονίας\\}
 		{\Large Τμήμα Ηλεκτρολόγων Μηχανικών \& Μηχανικών Υπολογιστών}
-		
+
 		\begin{center}
 			% leave 2 cm from above text
 			\vspace{2cm}
-			
 			\HRule \\[0.4cm]
 			{\huge Σχεδίαση και Υλοποίηση Πληροφοριακού Συστήματος Ανοιχτού Κώδικα για Διαχείριση Εκκίνησης Υπολογιστών μέσω Δικτύου\\}
 			\HRule \\[0.4cm]
 		\end{center}
-		
+
 		% put this on the bottom
 		\vfill
 		\begin{doublespacing}
-			
 			{\LARGE Χρήστος Καραμολέγκος\\}
 			{\Large Επιβλέπων Καθηγητής: Δρ. Μηνάς Δασυγένης\\}
 			{\Large \href{https://arch.ece.uowm.gr/mdasyg/}{\textit{https://arch.ece.uowm.gr/mdasyg/}}\\}
@@ -28,33 +28,33 @@
 			{\Large \today}
 		\end{doublespacing}
 	\end{center}
+	% insert blank page after title page
+	\newpage
+	\thispagestyle{empty}
+	\mbox{}
 \end{titlepage}
-
-% insert blank page after title page
-\blankpage
 
 \selectlanguage{english}
 \begin{titlepage}
+	\setcounter{page}{3}
 	\begin{center}
 		\begin{figure}[h]
 			\centering \includegraphics[scale=0.25]{ece.png}
 		\end{figure}
 		{\LARGE University of Western Macedonia\\}
 		{\Large Department of Electrical \& Computer Engineering}
-		
+
 		\begin{center}
 			% leave 2 cm from above text
 			\vspace{2cm}
-			
 			\HRule \\[0.4cm]
 			{\huge Design and Implementation of an Open Source Platform for Managing Computer Booting over a Network\\}
 			\HRule \\[0.4cm]
 		\end{center}
-		
+
 		% put this on the bottom
 		\vfill
 		\begin{doublespacing}
-			
 			{\LARGE Christos Karamolegkos\\}
 			{\Large Supervisor: Dr. Minas Dasygenis\\}
 			{\Large \href{https://arch.ece.uowm.gr/mdasyg/}{\textit{https://arch.ece.uowm.gr/mdasyg/}}\\}
@@ -63,9 +63,11 @@
 			{\Large \today}
 		\end{doublespacing}
 	\end{center}
+	% insert blank page after title page
+	\newpage
+	\thispagestyle{empty}
+	\mbox{}
 \end{titlepage}
-% insert blank page after title page
-\afterpage{\blankpage}
 
 \selectlanguage{greek}
 
@@ -78,6 +80,7 @@
 \include{Abstract/Abstract-gr}
 \selectlanguage{english}
 \include{Abstract/Abstract-eng}
+
 \selectlanguage{greek}
 
 % insert table of contents
