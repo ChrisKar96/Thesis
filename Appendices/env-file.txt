@@ -1,0 +1,35 @@
+#--------------------------------------------------------------------
+# APP
+#--------------------------------------------------------------------
+
+app.baseURL = 'http://iboot.example.com/'
+app.forceGlobalSecureRequests = false
+
+#--------------------------------------------------------------------
+# DATABASE
+#--------------------------------------------------------------------
+
+database.default.hostname = localhost
+database.default.database = iboot
+database.default.username = iboot
+database.default.password = iboot
+database.default.DBDriver = MySQLi
+database.default.DBPrefix = ibt_
+
+#--------------------------------------------------------------------
+# EMAIL
+#--------------------------------------------------------------------
+
+email.fromEmail = 'no-reply@iboot.example.com'
+email.fromName = 'iBoot'
+# email.protocol = 'mail'
+# email.mailPath = '/usr/sbin/sendmail'
+# email.SMTPHost = ''
+# email.SMTPUser = ''
+# email.SMTPPass = ''
+# email.SMTPPort = ''
+
+#--------------------------------------------------------------------
+# JWT
+#--------------------------------------------------------------------
+JWT_SECRET = '36wfpzOaVveefvs5mcHVAhsqEpKTzpfcLz+LkAct'

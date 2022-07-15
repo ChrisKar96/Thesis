@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+	ServerName iboot.example.com
+	ServerAdmin webmaster@example.com
+	DocumentRoot /srv/iboot/public
+	ErrorLog /var/log/apache2/iboot-error.log
+	CustomLog /var/log/apache2/iboot-access.log combined
+	<Directory /srv/iboot/public>
+		Options Indexes FollowSymLinks
+		AllowOverride All
+		Require all granted
+	</Directory>
+</VirtualHost>
