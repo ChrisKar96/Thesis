@@ -2,164 +2,153 @@
 % Structure: boot_menu
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή του πίνακα boot\_menu} \label{tab:boot_menu-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline
-	\endfirsthead
-	\caption{Δομή του πίνακα boot\_menu (συνέχεια)} \\ 
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot 
-	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline 
-	name & varchar(20) & Όχι &  &  & Όνομα μενού εκκίνησης \\ \hline 
+	\caption{Δομή πίνακα boot\_menu} \label{tab:boot_menu-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα boot\_menu (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
+	name & varchar(20) & Όχι &  &  & Όνομα μενού εκκίνησης \\ \hline
 \end{longtable}
 
 %
 % Structure: boot_menu_images
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή του πίνακα boot\_menu\_images} \label{tab:boot_menu_images-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline
-	\endfirsthead
-	\caption{Δομή του πίνακα boot\_menu\_images (συνέχεια)} \\ 
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot 
-	\textbf{\textit{boot\_menu\_id}} & int(10) & Όχι &  & boot\_menu (id) & Αναγνωριστικό μενού εκκίνησης \\ \hline 
-	\textbf{\textit{image\_id}} & int(10) & Όχι &  & os\_images (id) & Αναγνωριστικό εικόνας λειτουργικού συστήματος \\ \hline 
+	\caption{Δομή πίνακα boot\_menu\_images} \label{tab:boot_menu_images-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα boot\_menu\_images (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{boot\_menu\_id}} & int(10) & Όχι &  & boot\_menu (id) & Αναγνωριστικό μενού εκκίνησης \\ \hline
+	\textbf{\textit{image\_id}} & int(10) & Όχι &  & os\_images (id) & Αναγνωριστικό εικόνας λειτουργικού συστήματος \\ \hline
 \end{longtable}
 
 %
 % Structure: boot_menu_schedules
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή του πίνακα boot\_menu\_schedules} \label{tab:boot_menu_schedules-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline
-	\endfirsthead
-	\caption{Δομή του πίνακα boot\_menu\_schedules (συνέχεια)} \\ 
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot 
-	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline 
-	time\_from & time & Ναι & ΚΕΝΟ &  & Ώρα έναρξης \\ \hline 
-	time\_to & time & Ναι & ΚΕΝΟ &  & 'Ωρα λήξης \\ \hline 
-	day\_of\_week & tinyint(3) & Ναι & ΚΕΝΟ &  & Μέρα της εβδομάδας \\ \hline 
-	date & date & Ναι & ΚΕΝΟ &  & Ημερομηνία \\ \hline 
-	boot\_menu\_id & int(10) & Όχι &  & boot\_menu (id) & Αναγνωριστικό μενού εκκίνησης \\ \hline 
-	group\_id & int(10) & Όχι &  & groups (id) & Αναγνωριστικό ομάδας υπολογιστών \\ \hline 
+	\caption{Δομή πίνακα boot\_menu\_schedules} \label{tab:boot_menu_schedules-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα boot\_menu\_schedules (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
+	time\_from & time & Ναι & ΚΕΝΟ &  & Ώρα έναρξης \\ \hline
+	time\_to & time & Ναι & ΚΕΝΟ &  & 'Ωρα λήξης \\ \hline
+	day\_of\_week & tinyint(3) & Ναι & ΚΕΝΟ &  & Μέρα της εβδομάδας \\ \hline
+	date & date & Ναι & ΚΕΝΟ &  & Ημερομηνία \\ \hline
+	boot\_menu\_id & int(10) & Όχι &  & boot\_menu (id) & Αναγνωριστικό μενού εκκίνησης \\ \hline
+	group\_id & int(10) & Όχι &  & groups (id) & Αναγνωριστικό ομάδας υπολογιστών \\ \hline
 \end{longtable}
 
 %
 % Structure: computers
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή του πίνακα computers} \label{tab:computers-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline
-	\endfirsthead
-	\caption{Δομή του πίνακα computers (συνέχεια)} \\ 
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot 
-	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline 
-	name & varchar(20) & Ναι & ΚΕΝΟ &  & Όνομα υπολογιστή \\ \hline 
-	uuid & varchar(36) & Όχι &  &  & Μοναδικό αναγνωριστικό του υπολογιστή, παρεχόμενο από το bios \\ \hline 
-	mac & char(17) & Όχι &  &  & Η φυσική διεύθυνση διεπαφής δικτύου του υπολογιστή \\ \hline 
-	lab & int(10) & Ναι & ΚΕΝΟ & labs (id) & Αναγνωριστικό εργαστηρίου στο οποίο βρίσκεται ο υπολογιστής \\ \hline 
+	\caption{Δομή πίνακα computers} \label{tab:computers-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα computers (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
+	name & varchar(20) & Ναι & ΚΕΝΟ &  & Όνομα υπολογιστή \\ \hline
+	uuid & varchar(36) & Όχι &  &  & Μοναδικό αναγνωριστικό του υπολογιστή, παρεχόμενο από το bios \\ \hline
+	mac & char(17) & Όχι &  &  & Η φυσική διεύθυνση διεπαφής δικτύου του υπολογιστή \\ \hline
+	lab & int(10) & Ναι & ΚΕΝΟ & labs (id) & Αναγνωριστικό εργαστηρίου στο οποίο βρίσκεται ο υπολογιστής \\ \hline
 \end{longtable}
 
 %
 % Structure: computer_groups
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή του πίνακα computer\_groups} \label{tab:computer_groups-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline
-	\endfirsthead
-	\caption{Δομή του πίνακα computer\_groups (συνέχεια)} \\ 
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot 
-	group\_id & int(10) & Όχι &  & groups (id) & Αναγνωριστικό ομάδας υπολογιστών \\ \hline 
-	computer\_id & int(10) & Όχι &  & computers (id) & Αναγνωριστικό υπολογιστή \\ \hline 
+	\caption{Δομή πίνακα computer\_groups} \label{tab:computer_groups-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα computer\_groups (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	group\_id & int(10) & Όχι &  & groups (id) & Αναγνωριστικό ομάδας υπολογιστών \\ \hline
+	computer\_id & int(10) & Όχι &  & computers (id) & Αναγνωριστικό υπολογιστή \\ \hline
 \end{longtable}
 
 %
 % Structure: forgot_password_tokens
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή του πίνακα forgot\_password\_tokens} \label{tab:forgot_password_tokens-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline
-	\endfirsthead
-	\caption{Δομή του πίνακα forgot\_password\_tokens (συνέχεια)} \\ 
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot 
-	\textbf{\textit{user\_id}} & int(10) & Όχι &  & users (id) & Αναγνωριστικό χρήστη \\ \hline 
-	\textbf{token} & varchar(255) & Ναι & ΚΕΝΟ &  & Αλφαριθμητικό αλλαγής κωδικού πρόσβασης \\ \hline 
-	exp\_date & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία λήξης αλφαριθμητικού \\ \hline 
+	\caption{Δομή πίνακα forgot\_password\_tokens} \label{tab:forgot_password_tokens-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα forgot\_password\_tokens (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{user\_id}} & int(10) & Όχι &  & users (id) & Αναγνωριστικό χρήστη \\ \hline
+	\textbf{token} & varchar(255) & Ναι & ΚΕΝΟ &  & Αλφαριθμητικό αλλαγής κωδικού πρόσβασης \\ \hline
+	exp\_date & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία λήξης αλφαριθμητικού \\ \hline
 \end{longtable}
 
 %
 % Structure: groups
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή του πίνακα groups} \label{tab:groups-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline
-	\endfirsthead
-	\caption{Δομή του πίνακα groups (συνέχεια)} \\ 
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot 
-	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline 
-	name & varchar(20) & Όχι &  &  & Όνομα ομάδας \\ \hline 
-	image\_server\_ip & varchar(15) & Όχι &  &  & Διεύθυνση server εικόνων \\ \hline 
-	image\_server\_prefix\_path & varchar(50) & Όχι &  &  & Πρόθεμα διεύθυνσης εικόνων \\ \hline 
+	\caption{Δομή πίνακα groups} \label{tab:groups-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα groups (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
+	name & varchar(20) & Όχι &  &  & Όνομα ομάδας \\ \hline
+	image\_server\_ip & varchar(15) & Όχι &  &  & Διεύθυνση server εικόνων \\ \hline
+	image\_server\_prefix\_path & varchar(50) & Όχι &  &  & Πρόθεμα διεύθυνσης εικόνων \\ \hline
 \end{longtable}
 
 %
 % Structure: labs
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή του πίνακα labs} \label{tab:labs-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline
-	\endfirsthead
-	\caption{Δομή του πίνακα labs (συνέχεια)} \\ 
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot 
-	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline 
-	name & varchar(20) & Όχι &  &  & Όνομα εργαστηρίου \\ \hline 
-	address & varchar(50) & Ναι & ΚΕΝΟ &  & Διεύθυνση εργαστηρίου \\ \hline 
-	phone & varchar(15) & Ναι & ΚΕΝΟ &  & Τηλέφωνο εργαστηρίου \\ \hline 
+	\caption{Δομή πίνακα labs} \label{tab:labs-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα labs (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
+	name & varchar(20) & Όχι &  &  & Όνομα εργαστηρίου \\ \hline
+	address & varchar(50) & Ναι & ΚΕΝΟ &  & Διεύθυνση εργαστηρίου \\ \hline
+	phone & varchar(15) & Ναι & ΚΕΝΟ &  & Τηλέφωνο εργαστηρίου \\ \hline
 \end{longtable}
 
 %
 % Structure: os_images
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή του πίνακα os\_images} \label{tab:os_images-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline
-	\endfirsthead
-	\caption{Δομή του πίνακα os\_images (συνέχεια)} \\ 
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot 
-	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline 
-	name & varchar(30) & Όχι &  &  & Το όνομα της εικόνας λειτουργικού συστήματος \\ \hline 
-	ipxe\_entry & text & Όχι &  &  & Η ipxe εγγραφή για την εκκίνηση της εικόνας \\ \hline 
+	\caption{Δομή πίνακα os\_images} \label{tab:os_images-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα os\_images (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
+	name & varchar(30) & Όχι &  &  & Το όνομα της εικόνας λειτουργικού συστήματος \\ \hline
+	ipxe\_entry & text & Όχι &  &  & Η ipxe εγγραφή για την εκκίνηση της εικόνας \\ \hline
 \end{longtable}
 
 %
 % Structure: users
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή του πίνακα users} \label{tab:users-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline
-	\endfirsthead
-	\caption{Δομή του πίνακα users (συνέχεια)} \\ 
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot 
-	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline 
-	name & varchar(40) & Όχι &  &  & Ονοματεπώνυμο \\ \hline 
-	\textbf{email} & varchar(320) & Όχι &  &  & Διεύθυνση email\\ \hline 
-	phone & varchar(15) & Ναι & ΚΕΝΟ &  & Αριθμός τηλεφώνου \\ \hline 
-	\textbf{username} & varchar(40) & Όχι &  &  & Όνομα χρήστη \\ \hline 
-	password & varchar(255) & Όχι &  &  & Κωδικός πρόσβασης \\ \hline 
-	admin & tinyint(1) & Όχι & 0 &  & Παίρνει τιμή '1' αν ο χρήστης είναι γενικός διαχειριστής, αλλιώς '0' \\ \hline 
-	accepted & tinyint(1) & Όχι & 0 &  & Παίρνει τιμή '1' αν ο χρήστης έχει γίνει δεκτός στο σύστημα, αλλιώς '0' \\ \hline 
-	verifiedEmail & tinyint(1) & Όχι & 0 &  & Παίρνει τιμή '1' αν ο χρήστης έχει επιβεβαιώσει τη διεύθυνση email του, αλλιώς '0' \\ \hline 
-	created\_at & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία δημιουργίας του χρήστη \\ \hline 
-	updated\_at & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία ενημέρωσης του χρήστη \\ \hline 
+	\caption{Δομή πίνακα users} \label{tab:users-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα users (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
+	name & varchar(40) & Όχι &  &  & Ονοματεπώνυμο \\ \hline
+	\textbf{email} & varchar(320) & Όχι &  &  & Διεύθυνση email\\ \hline
+	phone & varchar(15) & Ναι & ΚΕΝΟ &  & Αριθμός τηλεφώνου \\ \hline
+	\textbf{username} & varchar(40) & Όχι &  &  & Όνομα χρήστη \\ \hline
+	password & varchar(255) & Όχι &  &  & Κωδικός πρόσβασης \\ \hline
+	admin & tinyint(1) & Όχι & 0 &  & Παίρνει τιμή '1' αν ο χρήστης είναι γενικός διαχειριστής, αλλιώς '0' \\ \hline
+	accepted & tinyint(1) & Όχι & 0 &  & Παίρνει τιμή '1' αν ο χρήστης έχει γίνει δεκτός στο σύστημα, αλλιώς '0' \\ \hline
+	verifiedEmail & tinyint(1) & Όχι & 0 &  & Παίρνει τιμή '1' αν ο χρήστης έχει επιβεβαιώσει τη διεύθυνση email του, αλλιώς '0' \\ \hline
+	created\_at & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία δημιουργίας του χρήστη \\ \hline
+	updated\_at & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία ενημέρωσης του χρήστη \\ \hline
 \end{longtable}
 
 %
 % Structure: user_labs
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή του πίνακα user\_labs} \label{tab:user_labs-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline
-	\endfirsthead
-	\caption{Δομή του πίνακα user\_labs (συνέχεια)} \\ 
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot 
-	\textbf{\textit{user\_id}} & int(10) & Όχι &  & users (id) & Αναγνωριστικό χρήστη \\ \hline 
-	\textbf{\textit{lab\_id}} & int(10) & Όχι &  & labs (id) & Αναγνωριστικό εργαστηρίου \\ \hline 
+	\caption{Δομή πίνακα user\_labs} \label{tab:user_labs-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα user\_labs (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{user\_id}} & int(10) & Όχι &  & users (id) & Αναγνωριστικό χρήστη \\ \hline
+	\textbf{\textit{lab\_id}} & int(10) & Όχι &  & labs (id) & Αναγνωριστικό εργαστηρίου \\ \hline
 \end{longtable}
