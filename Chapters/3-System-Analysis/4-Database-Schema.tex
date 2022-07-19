@@ -18,25 +18,9 @@
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
 	\caption[{}]{Δομή πίνακα boot\_menu\_images (συνέχεια)} \\
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
-	\textbf{\textit{boot\_menu\_id}} & int(10) & Όχι &  & boot\_menu (id) & Αναγνωριστικό μενού εκκίνησης \\ \hline
-	\textbf{\textit{image\_id}} & int(10) & Όχι &  & os\_images (id) & Αναγνωριστικό εικόνας λειτουργικού συστήματος \\ \hline
-\end{longtable}
-
-%
-% Structure: boot_menu_schedules
-%
-\begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή πίνακα boot\_menu\_schedules} \label{tab:boot_menu_schedules-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
-	\caption[{}]{Δομή πίνακα boot\_menu\_schedules (συνέχεια)} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
 	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
-	time\_from & time & Ναι & ΚΕΝΟ &  & Ώρα έναρξης \\ \hline
-	time\_to & time & Ναι & ΚΕΝΟ &  & 'Ωρα λήξης \\ \hline
-	day\_of\_week & tinyint(3) & Ναι & ΚΕΝΟ &  & Μέρα της εβδομάδας \\ \hline
-	date & date & Ναι & ΚΕΝΟ &  & Ημερομηνία \\ \hline
 	boot\_menu\_id & int(10) & Όχι &  & boot\_menu (id) & Αναγνωριστικό μενού εκκίνησης \\ \hline
-	group\_id & int(10) & Όχι &  & groups (id) & Αναγνωριστικό ομάδας υπολογιστών \\ \hline
+	image\_id & int(10) & Όχι &  & os\_images (id) & Αναγνωριστικό εικόνας λειτουργικού συστήματος \\ \hline
 \end{longtable}
 
 %
@@ -62,6 +46,7 @@
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
 	\caption[{}]{Δομή πίνακα computer\_groups (συνέχεια)} \\
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
 	group\_id & int(10) & Όχι &  & groups (id) & Αναγνωριστικό ομάδας υπολογιστών \\ \hline
 	computer\_id & int(10) & Όχι &  & computers (id) & Αναγνωριστικό υπολογιστή \\ \hline
 \end{longtable}
@@ -121,6 +106,23 @@
 \end{longtable}
 
 %
+% Structure: schedules
+%
+\begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
+	\caption{Δομή πίνακα schedules} \label{tab:schedules-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα schedules (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
+	time\_from & time & Ναι & ΚΕΝΟ &  & Ώρα έναρξης \\ \hline
+	time\_to & time & Ναι & ΚΕΝΟ &  & 'Ωρα λήξης \\ \hline
+	day\_of\_week & tinyint(3) & Ναι & ΚΕΝΟ &  & Μέρα της εβδομάδας \\ \hline
+	date & date & Ναι & ΚΕΝΟ &  & Ημερομηνία \\ \hline
+	boot\_menu\_id & int(10) & Όχι &  & boot\_menu (id) & Αναγνωριστικό μενού εκκίνησης \\ \hline
+	group\_id & int(10) & Όχι &  & groups (id) & Αναγνωριστικό ομάδας υπολογιστών \\ \hline
+\end{longtable}
+
+%
 % Structure: users
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
@@ -134,8 +136,7 @@
 	phone & varchar(15) & Ναι & ΚΕΝΟ &  & Αριθμός τηλεφώνου \\ \hline
 	\textbf{username} & varchar(40) & Όχι &  &  & Όνομα χρήστη \\ \hline
 	password & varchar(255) & Όχι &  &  & Κωδικός πρόσβασης \\ \hline
-	admin & tinyint(1) & Όχι & 0 &  & Παίρνει τιμή '1' αν ο χρήστης είναι γενικός διαχειριστής, αλλιώς '0' \\ \hline
-	accepted & tinyint(1) & Όχι & 0 &  & Παίρνει τιμή '1' αν ο χρήστης έχει γίνει δεκτός στο σύστημα, αλλιώς '0' \\ \hline
+	isAdmin & tinyint(1) & Όχι & 0 &  & Παίρνει τιμή '1' αν ο χρήστης είναι γενικός διαχειριστής, αλλιώς '0' \\ \hline
 	verifiedEmail & tinyint(1) & Όχι & 0 &  & Παίρνει τιμή '1' αν ο χρήστης έχει επιβεβαιώσει τη διεύθυνση email του, αλλιώς '0' \\ \hline
 	created\_at & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία δημιουργίας του χρήστη \\ \hline
 	updated\_at & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία ενημέρωσης του χρήστη \\ \hline
@@ -149,6 +150,7 @@
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
 	\caption[{}]{Δομή πίνακα user\_labs (συνέχεια)} \\
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
-	\textbf{\textit{user\_id}} & int(10) & Όχι &  & users (id) & Αναγνωριστικό χρήστη \\ \hline
-	\textbf{\textit{lab\_id}} & int(10) & Όχι &  & labs (id) & Αναγνωριστικό εργαστηρίου \\ \hline
+	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
+	user\_id & int(10) & Όχι &  & users (id) & Αναγνωριστικό χρήστη \\ \hline
+	lab\_id & int(10) & Όχι &  & labs (id) & Αναγνωριστικό εργαστηρίου \\ \hline
 \end{longtable}
