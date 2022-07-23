@@ -1,5 +1,5 @@
 %
-% Structure: boot_menu
+% Δομή πίνακα: boot_menu
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
 	\caption{Δομή πίνακα boot\_menu} \label{tab:boot_menu-structure} \\
@@ -8,23 +8,26 @@
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
 	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
 	name & varchar(20) & Όχι &  &  & Όνομα μενού εκκίνησης \\ \hline
+	description & varchar(50) & Όχι &  &  & Περιγραφή μενού εκκίνησης \\ \hline 
+	ipxe\_block & text & Ναι & NULL &  & Προαιρετικό επιπρόσθετο block εντολών τύπου ipxe \\ \hline 
 \end{longtable}
 
 %
-% Structure: boot_menu_images
+% Δομή πίνακα: boot_menu_blocks
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή πίνακα boot\_menu\_images} \label{tab:boot_menu_images-structure} \\
+	\caption{Δομή πίνακα boot\_menu\_blocks} \label{tab:boot_menu_blocks-structure} \\
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
-	\caption[{}]{Δομή πίνακα boot\_menu\_images (συνέχεια)} \\
+	\caption[{}]{Δομή πίνακα boot\_menu\_blocks (συνέχεια)} \\
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
 	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
 	boot\_menu\_id & int(10) & Όχι &  & boot\_menu (id) & Αναγνωριστικό μενού εκκίνησης \\ \hline
-	image\_id & int(10) & Όχι &  & os\_images (id) & Αναγνωριστικό εικόνας λειτουργικού συστήματος \\ \hline
+	block\_id & int(10) & Όχι &  & ipxe\_blocks (id) & Αναγνωριστικό εικόνας λειτουργικού συστήματος \\ \hline 
+	key & varchar(1) & Ναι & NULL &  & Προαιρετικό κουμπί συντόμευσης για το block στο μενού εκκίνησης \\ \hline 
 \end{longtable}
 
 %
-% Structure: computers
+% Δομή πίνακα: computers
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
 	\caption{Δομή πίνακα computers} \label{tab:computers-structure} \\
@@ -35,11 +38,12 @@
 	name & varchar(20) & Ναι & ΚΕΝΟ &  & Όνομα υπολογιστή \\ \hline
 	uuid & varchar(36) & Όχι &  &  & Μοναδικό αναγνωριστικό του υπολογιστή, παρεχόμενο από το bios \\ \hline
 	mac & char(17) & Όχι &  &  & Η φυσική διεύθυνση διεπαφής δικτύου του υπολογιστή \\ \hline
+	notes & text & Ναι & NULL &  & Σημειώσεις για τον υπολογιστή \\ \hline 
 	lab & int(10) & Ναι & ΚΕΝΟ & labs (id) & Αναγνωριστικό εργαστηρίου στο οποίο βρίσκεται ο υπολογιστής \\ \hline
 \end{longtable}
 
 %
-% Structure: computer_groups
+% Δομή πίνακα: computer_groups
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
 	\caption{Δομή πίνακα computer\_groups} \label{tab:computer_groups-structure} \\
@@ -52,7 +56,7 @@
 \end{longtable}
 
 %
-% Structure: forgot_password_tokens
+% Δομή πίνακα: forgot_password_tokens
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
 	\caption{Δομή πίνακα forgot\_password\_tokens} \label{tab:forgot_password_tokens-structure} \\
@@ -65,7 +69,7 @@
 \end{longtable}
 
 %
-% Structure: groups
+% Δομή πίνακα: groups
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
 	\caption{Δομή πίνακα groups} \label{tab:groups-structure} \\
@@ -79,7 +83,20 @@
 \end{longtable}
 
 %
-% Structure: labs
+% Δομή πίνακα: ipxe_blocks
+%
+\begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
+	\caption{Δομή πίνακα ipxe\_blocks} \label{tab:ipxe_blocks-structure} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
+	\caption[{}]{Δομή πίνακα ipxe\_blocks (συνέχεια)} \\
+	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
+	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
+	name & varchar(30) & Όχι &  &  & Το όνομα της εικόνας λειτουργικού συστήματος \\ \hline
+	ipxe\_block & text & Όχι &  &  & Το block εντολών τύπου ipxe \\ \hline
+\end{longtable}
+
+%
+% Δομή πίνακα: labs
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
 	\caption{Δομή πίνακα labs} \label{tab:labs-structure} \\
@@ -93,20 +110,7 @@
 \end{longtable}
 
 %
-% Structure: os_images
-%
-\begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
-	\caption{Δομή πίνακα os\_images} \label{tab:os_images-structure} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endfirsthead
-	\caption[{}]{Δομή πίνακα os\_images (συνέχεια)} \\
-	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
-	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
-	name & varchar(30) & Όχι &  &  & Το όνομα της εικόνας λειτουργικού συστήματος \\ \hline
-	ipxe\_entry & text & Όχι &  &  & Η ipxe εγγραφή για την εκκίνηση της εικόνας \\ \hline
-\end{longtable}
-
-%
-% Structure: schedules
+% Δομή πίνακα: schedules
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
 	\caption{Δομή πίνακα schedules} \label{tab:schedules-structure} \\
@@ -120,10 +124,13 @@
 	date & date & Ναι & ΚΕΝΟ &  & Ημερομηνία \\ \hline
 	boot\_menu\_id & int(10) & Όχι &  & boot\_menu (id) & Αναγνωριστικό μενού εκκίνησης \\ \hline
 	group\_id & int(10) & Όχι &  & groups (id) & Αναγνωριστικό ομάδας υπολογιστών \\ \hline
+	isActive & tinyint(1) & Όχι & 1 &  & Παίρνει τιμή '1' αν το χρονοδιάγραμμα είναι ενεργό, αλλιώς '0'  \\ \hline 
+	created\_at & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία δημιουργίας του χρονοδιαγράμματος \\ \hline
+	updated\_at & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία ενημέρωσης του χρονοδιαγράμματος \\ \hline
 \end{longtable}
 
 %
-% Structure: users
+% Δομή πίνακα: users
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
 	\caption{Δομή πίνακα users} \label{tab:users-structure} \\
@@ -143,7 +150,7 @@
 \end{longtable}
 
 %
-% Structure: user_labs
+% Δομή πίνακα: user_labs
 %
 \begin{longtable}{|l|c|c|c|l|p{4.5cm}|}
 	\caption{Δομή πίνακα user\_labs} \label{tab:user_labs-structure} \\
