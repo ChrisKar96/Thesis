@@ -8,8 +8,8 @@
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
 	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
 	name & varchar(20) & Όχι &  &  & Όνομα μενού εκκίνησης \\ \hline
-	description & varchar(50) & Όχι &  &  & Περιγραφή μενού εκκίνησης \\ \hline 
-	ipxe\_block & text & Ναι & NULL &  & Προαιρετικό επιπρόσθετο block εντολών τύπου ipxe \\ \hline 
+	description & varchar(50) & Όχι &  &  & Περιγραφή μενού εκκίνησης \\ \hline
+	ipxe\_block & text & Ναι & NULL &  & Προαιρετικό επιπρόσθετο block εντολών τύπου ipxe \\ \hline
 \end{longtable}
 
 %
@@ -22,8 +22,8 @@
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
 	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
 	boot\_menu\_id & int(10) & Όχι &  & boot\_menu (id) & Αναγνωριστικό μενού εκκίνησης \\ \hline
-	block\_id & int(10) & Όχι &  & ipxe\_blocks (id) & Αναγνωριστικό εικόνας λειτουργικού συστήματος \\ \hline 
-	key & varchar(1) & Ναι & NULL &  & Προαιρετικό κουμπί συντόμευσης για το block στο μενού εκκίνησης \\ \hline 
+	block\_id & int(10) & Όχι &  & ipxe\_blocks (id) & Αναγνωριστικό εικόνας λειτουργικού συστήματος \\ \hline
+	key & varchar(1) & Ναι & NULL &  & Προαιρετικό κουμπί συντόμευσης για το block στο μενού εκκίνησης \\ \hline
 \end{longtable}
 
 %
@@ -38,7 +38,7 @@
 	name & varchar(20) & Ναι & ΚΕΝΟ &  & Όνομα υπολογιστή \\ \hline
 	uuid & varchar(36) & Όχι &  &  & Μοναδικό αναγνωριστικό του υπολογιστή, παρεχόμενο από το bios \\ \hline
 	mac & char(17) & Όχι &  &  & Η φυσική διεύθυνση διεπαφής δικτύου του υπολογιστή \\ \hline
-	notes & text & Ναι & NULL &  & Σημειώσεις για τον υπολογιστή \\ \hline 
+	notes & text & Ναι & NULL &  & Σημειώσεις για τον υπολογιστή \\ \hline
 	lab & int(10) & Ναι & ΚΕΝΟ & labs (id) & Αναγνωριστικό εργαστηρίου στο οποίο βρίσκεται ο υπολογιστής \\ \hline
 \end{longtable}
 
@@ -124,7 +124,7 @@
 	date & date & Ναι & ΚΕΝΟ &  & Ημερομηνία \\ \hline
 	boot\_menu\_id & int(10) & Όχι &  & boot\_menu (id) & Αναγνωριστικό μενού εκκίνησης \\ \hline
 	group\_id & int(10) & Όχι &  & groups (id) & Αναγνωριστικό ομάδας υπολογιστών \\ \hline
-	isActive & tinyint(1) & Όχι & 1 &  & Παίρνει τιμή '1' αν το χρονοδιάγραμμα είναι ενεργό, αλλιώς '0'  \\ \hline 
+	isActive & tinyint(1) & Όχι & 1 &  & Παίρνει τιμή '1' αν το χρονοδιάγραμμα είναι ενεργό, αλλιώς '0'  \\ \hline
 	created\_at & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία δημιουργίας του χρονοδιαγράμματος \\ \hline
 	updated\_at & timestamp & Ναι & ΚΕΝΟ &  & Ημερομηνία ενημέρωσης του χρονοδιαγράμματος \\ \hline
 \end{longtable}
