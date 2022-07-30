@@ -1,14 +1,12 @@
 #--------------------------------------------------------------------
 # APP
 #--------------------------------------------------------------------
-
 app.baseURL = 'http://iboot.example.com/'
 app.forceGlobalSecureRequests = false
 
 #--------------------------------------------------------------------
 # DATABASE
 #--------------------------------------------------------------------
-
 database.default.hostname = localhost
 database.default.database = iboot
 database.default.username = iboot
@@ -19,7 +17,6 @@ database.default.DBPrefix = ibt_
 #--------------------------------------------------------------------
 # EMAIL
 #--------------------------------------------------------------------
-
 email.fromEmail = 'no-reply@iboot.example.com'
 email.fromName = 'iBoot'
 # email.protocol = 'mail'
