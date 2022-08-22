@@ -1,0 +1,104 @@
+@startuml
+left to right direction
+skinparam nodesep 30
+skinparam ranksep 30
+
+package iBoot {
+	rectangle "Βασικές Λειτουργίες Χρηστών" as userFunctions
+	usecase "Εγγραφή χρήστη στο σύστημα" as signup
+	usecase "Σύνδεση χρήστη στο σύστημα" as login
+	usecase "Επανέκδοση κωδικού χρήστη" as forgotPassword
+	usecase "Υπενθύμιση Ονόματος Χρήστη" as forgotUsername
+	usecase "Αποσύνδεση από το σύστημα" as logout
+	usecase "Αλλαγή στοιχείων χρήστη" as changeProfile
+	usecase "Διαγραφή χρήστη από το σύστημα" as deleteUser
+	rectangle "Διαχείριση Εργαστηρίων" as manageLabs
+	usecase "Εισαγωγή εργαστηρίου στο σύστημα" as addLab
+	usecase "Διαγραφή εργαστηρίου από το σύστημα" as deleteLab
+	usecase "Επεξεργασία αναθέσεων Διαχειριστών Εργαστηρίων" as editLabAdmin
+	rectangle "Διαχείριση Ομάδων Υπολογιστών" as manageGroups
+	usecase "Δημιουργία ομάδας υπολογιστών" as addGroup
+	usecase "Διαγραφή ομάδας υπολογιστών" as deleteGroup
+	rectangle "Διαχείριση Υπολογιστών" as manageComputers
+	usecase "Εισαγωγή υπολογιστή στο σύστημα" as addComputer
+	usecase "Ανάθεση υπολογιστή σε εργαστήριο" as addComputerLab
+	usecase "Αφαίρεση υπολογιστή από εργαστήριο" as deleteComputerLab
+	usecase "Επεξεργασία στοιχείων υπολογιστή" as editComputer
+	usecase "Διαγραφή υπολογιστή από το σύστημα" as deleteComputer
+	rectangle "Διαχείριση Block Εντολών Τύπου iPXE" as manageIpxeblocks
+	usecase "Εισαγωγή ονοματισμένου block εντολών τύπου iPXE στο σύστημα" as addIpxeblock
+	usecase "Επεξεργασία στοιχείων ονοματισμένου block εντολών τύπου iPXE" as editIpxeblock
+	usecase "Διαγραφή ονοματισμένου block εντολών τύπου iPXE από το σύστημα" as deleteIpxeblock
+	rectangle "Διαχείριση Μενού Εκκίνησης" as manageBootMenu
+	usecase "Δημιουργία μενού εκκίνησης" as addBootMenu
+	usecase "Επεξεργασία στοιχείων μενού εκκίνησης" as editBootMenu
+	usecase "Διαγραφή μενού εκκίνησης" as deleteBootMenu
+	rectangle "Διαχείριση Χρονοδιαγραμμάτων Μενού Εκκίνησης" as manageSchedules
+	usecase "Δημιουργία χρονοδιαγράμματος μενού εκκίνησης" as addSchedule
+	usecase "Επεξεργασία στοιχείων χρονοδιαγράμματος μενού εκκίνησης" as editSchedule
+	usecase "Διαγραφή χρονοδιαγράμματος μενού εκκίνησης" as deleteSchedule
+	rectangle "Διαχείριση Αρχείων Συμβάντων" as manageLogs
+	usecase "Προβολή αρχείων συμβάντων" as viewLogs
+	usecase "Διαγραφή αρχείων συμβάντων" as deleteLogs
+}
+
+actor "Χρήστης" as user
+actor "Ανώνυμος Χρήστης" as guestUser
+actor "Γενικός Διαχειριστής Πλατφόρμας" as admin
+actor "Διαχειριστής Εργαστηρίου" as labAdmin
+actor "Εγγεγραμμένος Χρήστης" as registeredUser
+
+user <|-- admin
+user <|-- labAdmin
+user <|-- guestUser
+
+admin --|> registeredUser
+labAdmin --|> registeredUser
+
+guestUser --> signup
+
+manageLogs ..> deleteLogs : include
+manageLogs .> viewLogs : include
+manageLogs .[hidden].> viewLogs : include
+admin --> manageLogs
+
+userFunctions ..> login : include
+userFunctions ..> forgotPassword : include
+userFunctions ..> forgotUsername : include
+userFunctions ..> changeProfile : include
+userFunctions ..> logout : include
+userFunctions ..> deleteUser : include
+registeredUser --> userFunctions
+
+manageLabs ..> addLab : include
+manageLabs ..> deleteLab : include
+manageLabs ..> editLabAdmin : include
+manageLabs .[hidden].> deleteLab : include
+admin --> manageLabs
+
+manageGroups ..> addGroup : include
+manageGroups ..> deleteGroup : include
+registeredUser --> manageGroups
+
+manageComputers ..> addComputer : include
+manageComputers ..> addComputerLab : include
+manageComputers ..> deleteComputerLab : include
+manageComputers ..> editComputer : include
+registeredUser --> manageComputers
+admin --> deleteComputer
+
+manageIpxeblocks ..> addIpxeblock : include
+manageIpxeblocks ..> editIpxeblock : include
+manageIpxeblocks ..> deleteIpxeblock : include
+registeredUser --> manageIpxeblocks
+
+manageBootMenu ..> addBootMenu : include
+manageBootMenu ..> editBootMenu : include
+manageBootMenu ..> deleteBootMenu : include
+registeredUser --> manageBootMenu
+
+manageSchedules ..> addSchedule : include
+manageSchedules ..> editSchedule : include
+manageSchedules ..> deleteSchedule : include
+registeredUser --> manageSchedules
+@enduml
