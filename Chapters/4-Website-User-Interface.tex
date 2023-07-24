@@ -51,6 +51,56 @@
 \subsection{Προδιαγραφή API}
 
 \section{Επεξήγηση Αρχείων}
+Καθώς η διαδικτυακή εφαρμογή αναπτύχθηκε με χρήση του CodeIgniter 4 Framework, χρησιμοποιεί και τη δομή αρχείων του.
+
+\subsection{Βασική Δομή}
+Η βασική δομή της εφαρμογής αποτελείται από πέντε καταλόγους: app/, public/, writable/, tests/ και vendor/ ή system/.
+
+\subsection{app}
+Στον κατάλογο app βρίσκεται όλος ο κώδικας της εφαρμογής. Οι ακόλουθοι φάκελοι αποτελούν τα βασικά περιεχόμενα:
+
+\begin{forest}
+	for tree={
+		font=\ttfamily,
+		grow'=0,
+		child anchor=west,
+		parent anchor=south,
+		anchor=west,
+		calign=first,
+		inner xsep=7pt,
+		edge path={
+			\noexpand\path [draw, \forestoption{edge}]
+			(!u.south west) +(7.5pt,0) |- (.child anchor) pic {folder} \forestoption{edge label};
+		},
+		before typesetting nodes={
+			if n=1
+			{insert before={[,phantom]}}
+			{}
+		},
+		fit=band,
+		before computing xy={l=15pt},
+	}  
+	[app/
+		[Config/ \ \ \ \ \ \ \ \ Περιέχει τα αρχεία ρύθμισης παραμέτρων]
+		[Controllers/ \ \ \ Περιέχει τους Controllers που καθορίζουν τη ροή του προγράμματος]
+		[Database/ \ \ \ \ \ \ Περιέχει αρχεία για τη δημιουργία και ενημέρωση του σχήματος και την αρχικοποίηση βάσεων δεδομένων]
+		[Filters/ \ \ \ \ \ \ \ Περιέχει κλάσεις φίλτρων που μπορούν να εκτελούνται πριν και μετά τους controllers]
+		[Helpers/ \ \ \ \ \ \ \ Περιέχει συλλογές αυτόνομων βοηθητικών συναρτήσεων]
+		[Language/ \ \ \ \ \ \ Περιέχει τις συμβολοσειρές γλώσσας για την υποστήριξη πολλαπλών γλωσσών]
+		[Libraries/ \ \ \ \ \ Περιέχει χρήσιμες κλάσεις που δεν ταιριάζουν σε άλλη κατηγορία]
+		[Models/ \ \ \ \ \ \ \ \ Περιέχει τα Models συνεργάζονται με τη βάση δεδομένων για την αναπαράσταση των επιχειρηματικών οντοτήτων]
+		[ThirdParty/ \ \ \ \ Περιέχει βιβλιοθήκες τρίτων που μπορούν να χρησιμοποιηθούν στην εφαρμογή]
+		[Views/ \ \ \ \ \ \ \ \ \ Περιέχει τα Views που συνθέτουν την HTML που εμφανίζεται στον πελάτη]
+	]
+\end{forest}
+
+\subsection{public}
+
+\subsection{writable}
+
+\subsection{tests}
+
+\subsection{system}
 
 \section{Ασφάλεια Συστήματος}
 
