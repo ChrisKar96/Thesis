@@ -31,6 +31,7 @@ jobs:
         with:
           tag_name: "latest"
           fail_on_unmatched_files: true
+          generate_release_notes: true
           files: |
             christos-karamolegkos-thesis.pdf
             christos-karamolegkos-thesis-printable.pdf
