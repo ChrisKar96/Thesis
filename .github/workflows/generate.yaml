@@ -14,10 +14,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Tag latest
-        uses: CrabMatrix/github-tagger@v1.0.16
+        uses: rickstaa/action-create-tag@v1
+        id: "tag_create"
         with:
-            repo-token: "${{ secrets.GITHUB_TOKEN }}"
-            tag: "latest"
+          tag: "latest"
+          tag_exists_error: false
+          force_push_tag: true
       - name: Install packages
         run: apt-get -qq update && apt-get install --no-install-recommends -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-fonts-extra-links texlive-font-utils texlive-plain-generic texlive-xetex texlive-lang-greek texlive-science texlive-bibtex-extra biber lmodern ghostscript
       - name: Generate pdf
