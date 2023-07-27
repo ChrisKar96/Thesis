@@ -13,25 +13,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Tag latest
-        uses: rickstaa/action-create-tag@v1
-        id: "tag_create"
-        with:
-          tag: "latest"
-          tag_exists_error: false
-          force_push_tag: true
       - name: Install packages
         run: apt-get -qq update && apt-get install --no-install-recommends -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-fonts-extra-links texlive-font-utils texlive-plain-generic texlive-xetex texlive-lang-greek texlive-science texlive-bibtex-extra biber lmodern ghostscript
-      - name: Generate pdf
+      - name: Generate standard pdf
         run: .github/workflows/generate.sh thesis
       - name: Generate printable pdf
         run: .github/workflows/generate.sh thesis-printable
-      - name: Publish pdf
-        uses: softprops/action-gh-release@v0.1.15
+      - name: Publish pdfs
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: "latest"
-          fail_on_unmatched_files: true
-          generate_release_notes: true
-          files: |
-            christos-karamolegkos-thesis.pdf
-            christos-karamolegkos-thesis-printable.pdf
+            artifacts: "christos-karamolegkos-thesis.pdf,christos-karamolegkos-thesis-printable.pdf"
+            makeLatest: true
+            tag: "release-${{ github.sha }}"
+            commit: "main"
+            artifactContentType: "application/pdf"
+            generateReleaseNotes: true
