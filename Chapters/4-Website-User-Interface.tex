@@ -8,9 +8,8 @@
 \section{Διεπαφή Χρήστη}
 
 \subsection{Εγγραφή \& Σύνδεση στο Σύστημα}
-
 \FloatBarrier
-
+Η σελίδα εγγραφής στο σύστημα απεικονίζεται στο σχήμα \ref{fig:iBoot_register} και είναι προσβάσιμη στη διεύθυνση \verb!/register!.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.25]{iBoot-register.png}
@@ -18,6 +17,9 @@
 	\label{fig:iBoot_register}
 \end{figure}
 
+Ο χρήστης θα πρέπει να συμπληρώσει εκεί τα στοιχεία που ζητούνται και στη συνέχεια να πατήσει το κουμπί της εγγραφής για να δημιουργηθεί ο λογαριασμός του. Αν δεν υπάρχει κανένας εγγεγραμμένος διαχειριστής στο σύστημα, η ίδια σελίδα αξιοποιείται για την εγγραφή του. Στη συνέχεια, οι επόμενοι χρήστες που εγγράφονται δεν έχουν ρόλο διαχειριστή. Ο υπάρχων διαχειριστής μπορεί να δώσει ρόλο διαχειριστή σε άλλους χρήστες από τη σελίδα διαχείρισης χρηστών \ref{fig:iBoot_users}.
+
+Η σελίδα σύνδεσης στο σύστημα απεικονίζεται στο σχήμα \ref{fig:iBoot_login} και είναι προσβάσιμη στη διεύθυνση \verb!/login!.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.25]{iBoot-login.png}
@@ -25,30 +27,155 @@
 	\label{fig:iBoot_login}
 \end{figure}
 
+Αν κάποιος χρήστης ξεχάσει τα στοιχεία πρόσβασής του και επιθυμεί να τα αλλάξει, θα πρέπει να επισκευτεί τη διεύθυνση \verb!/forgotCredentials!, η οποία απεικονίζεται στο σχήμα \ref{fig:iBoot_forgot_credentials}.
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.25]{iBoot-forgot-credentials.png}
+	\includegraphics[scale=0.25]{iBoot-forgot_credentials.png}
 	\caption{iBoot - Υπενθύμιση Στοιχείων Πρόσβασης}
 	\label{fig:iBoot_forgot_credentials}
 \end{figure}
+\FloatBarrier
 
+\subsection{Αρχική Σελίδα}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-dashboard.png}
+	\caption{iBoot - Αρχική Σελίδα}
+	\label{fig:iBoot_dashboard}
+\end{figure}
 \FloatBarrier
 
 \subsection{Μενού Πλοήγησης}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-nav_admin.png}
+	\caption{iBoot - Μενού Πλοήγησης Διαχειριστή}
+	\label{fig:iBoot_nav_admin}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-nav_user.png}
+	\caption{iBoot - Μενού Πλοήγησης Διαχειριστή Εργαστηρίου}
+	\label{fig:iBoot_nav_user}
+\end{figure}
+\FloatBarrier
 
 \subsection{Υπολογιστές}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-computers.png}
+	\caption{iBoot - Διαχείριση Υπολογιστών}
+	\label{fig:iBoot_computers}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-computers_unassigned.png}
+	\caption{iBoot - Διαχείριση Μη Εκχωρημένων Υπολογιστών}
+	\label{fig:iBoot_computers_unassigned}
+\end{figure}
+\FloatBarrier
 
 \subsection{Ομάδες Υπολογιστών}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-groups.png}
+	\caption{iBoot - Διαχείριση Ομάδων Υπολογιστών}
+	\label{fig:iBoot_groups}
+\end{figure}
+\FloatBarrier
 
 \subsection{Εργαστήρια}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-labs.png}
+	\caption{iBoot - Διαχείριση Εργαστηρίων}
+	\label{fig:iBoot_labs}
+\end{figure}
+\FloatBarrier
 
-\subsection{Block εντολών τύπου ipxe}
+\subsection{Block εντολών τύπου iPXE}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-ipxeblocks.png}
+	\caption{iBoot - Διαχείριση Μπλοκ Εντολών Τύπου iPXE}
+	\label{fig:iBoot_ipxeblocks}
+\end{figure}
+\FloatBarrier
 
 \subsection{Μενού Εκκίνησης}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-bootmenu.png}
+	\caption{iBoot - Διαχείριση Μενού Εκκίνησης}
+	\label{fig:iBoot_bootmenu}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-bootmenu_edit.png}
+	\caption{iBoot - Επεξεργασία Μενού Εκκίνησης}
+	\label{fig:iBoot_bootmenu_edit}
+\end{figure}
+\FloatBarrier
 
 \subsection{Χρονοδιαγράμματα}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-schedules.png}
+	\caption{iBoot - Διαχείριση Χρονοδιαγραμμάτων}
+	\label{fig:iBoot_schedules}
+\end{figure}
+\FloatBarrier
+
+\subsection{Χρήστες}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-users.png}
+	\caption{iBoot - Διαχείριση Χρηστών}
+	\label{fig:iBoot_users}
+\end{figure}
+\FloatBarrier
+
+\subsection{Συμβάντα}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-logs.png}
+	\caption{iBoot - Συμβάντα}
+	\label{fig:iBoot_logs}
+\end{figure}
+\FloatBarrier
+
+\subsection{Ρύθμιση Εκκίνησης Υπολογιστών}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-boot.png}
+	\caption{iBoot - Ρύθμιση Εκκίνησης Υπολογιστών}
+	\label{fig:iBoot_boot}
+\end{figure}
+\FloatBarrier
 
 \subsection{Προδιαγραφή API}
+\FloatBarrier
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.25]{iBoot-api_spec.png}
+	\caption{iBoot - Προδιαγραφή API}
+	\label{fig:iBoot_api_spec}
+\end{figure}
+\FloatBarrier
 
 \section{Επεξήγηση Αρχείων}
 Καθώς η διαδικτυακή εφαρμογή αναπτύχθηκε με χρήση του CodeIgniter 4 Framework, χρησιμοποιεί και τη δομή αρχείων του \cite{CodeIgniter_structure}.
