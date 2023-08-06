@@ -40,6 +40,7 @@
 	mac & char(17) & Όχι &  &  & Η φυσική διεύθυνση διεπαφής δικτύου του υπολογιστή \\ \hline
 	notes & text & Ναι & NULL &  & Σημειώσεις για τον υπολογιστή \\ \hline
 	lab & int(10) & Ναι & ΚΕΝΟ & labs (id) & Αναγνωριστικό εργαστηρίου στο οποίο βρίσκεται ο υπολογιστής \\ \hline
+	last\_boot & datetime & Ναι & ΚΕΝΟ & labs (id) & Ημερομηνία και ώρα τελευταίας εκκίνησης του υπολογιστή μέσω του συστήματος \\ \hline
 \end{longtable}
 
 %
@@ -78,8 +79,8 @@
 	\hline \multicolumn{1}{|c|}{\textbf{Στήλη}} & \multicolumn{1}{|c|}{\textbf{Τύπος}} & \multicolumn{1}{|c|}{\textbf{Κενό}} & \multicolumn{1}{|c|}{\textbf{Προεπιλογή}} & \multicolumn{1}{|c|}{\textbf{Σύνδεσμος}} & \multicolumn{1}{|c|}{\textbf{Σχόλιο}} \\ \hline \hline \endhead \endfoot
 	\textbf{\textit{id}} & int(10) & Όχι &  &  & Αναγνωριστικό οντότητας \\ \hline
 	name & varchar(20) & Όχι &  &  & Όνομα ομάδας \\ \hline
-	image\_server\_ip & varchar(15) & Όχι &  &  & Διεύθυνση server εικόνων \\ \hline
-	image\_server\_prefix\_path & varchar(50) & Όχι &  &  & Πρόθεμα διεύθυνσης εικόνων \\ \hline
+	image\_server\_ip & varchar(15) & Όχι &  &  & Διεύθυνση διακομιστή εικόνων \\ \hline
+	image\_server\_path\_prefix & varchar(50) & Όχι &  &  & Πρόθεμα διαδρομής εικόνων στον διακομιστή \\ \hline
 \end{longtable}
 
 %

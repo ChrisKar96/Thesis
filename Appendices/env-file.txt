@@ -29,4 +29,9 @@ email.fromName = 'iBoot'
 #--------------------------------------------------------------------
 # JWT
 #--------------------------------------------------------------------
-JWT_SECRET = '36wfpzOaVveefvs5mcHVAhsqEpKTzpfcLz+LkAct'
+jwt.secret = '36wfpzOaVveefvs5mcHVAhsqEpKTzpfcLz+LkAct'
+
+#--------------------------------------------------------------------
+# REGISTRATION
+#--------------------------------------------------------------------
+registration.enabled = true
