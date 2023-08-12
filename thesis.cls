@@ -163,6 +163,7 @@
 			folder,
 			font=\ttfamily,
 			grow'=0,
+			l sep+=6pt, % add length to the edge line, because the trees are inside '\footnotesize'
 		},
 		before typesetting nodes={%
 			for tree={%

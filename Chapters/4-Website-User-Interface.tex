@@ -322,34 +322,39 @@ H \emph{Καταχώρηση Μενού iPXE} είναι πεδίο ελεύθε
 \section{Επεξήγηση Αρχείων}
 Καθώς η διαδικτυακή εφαρμογή αναπτύχθηκε με χρήση του CodeIgniter 4 Framework, χρησιμοποιεί και τη δομή αρχείων του \cite{CodeIgniter_structure}.
 
-\subsection{Βασική Δομή}
+\subsection{Βασική Δομή CodeIgniter 4}
 Η βασική δομή της εφαρμογής αποτελείται από πέντε καταλόγους: \hyperref[ui:app]{app/}, \hyperref[ui:public]{public/}, \hyperref[ui:writable]{writable/}, \hyperref[ui:tests]{tests/} και \hyperref[ui:system]{vendor/ ή system/}.
 
 \subsubsection{app} \label{ui:app}
 Στον κατάλογο app βρίσκεται όλος ο κώδικας της εφαρμογής. Οι ακόλουθοι φάκελοι αποτελούν τα βασικά περιεχόμενα:\\
 
-{\footnotesize
-\begin{forest}
-	pic dir tree,
-	pic root,
-	for tree={% folder icons by default; override using file for file icons
-		directory,
-		fit=band
-	},
-	[app/
-		[Config/ \ \ \ \ \ \ Αρχεία ρύθμισης παραμέτρων της εφαρμογής]
-		[Controllers/ \ Οι Controllers που καθορίζουν τη ροή του προγράμματος]
-		[Database/ \ \ \ \ Κλάσεις για την ενημέρωση του σχήματος και την αρχικοποίηση βάσεων δεδομένων]
-		[Filters/ \ \ \ \ \ Κλάσεις φίλτρων που μπορούν να εκτελούνται πριν και μετά τους controllers]
-		[Helpers/ \ \ \ \ \ Συλλογές αυτόνομων βοηθητικών συναρτήσεων]
-		[Language/ \ \ \ \ Συμβολοσειρές γλώσσας για την υποστήριξη πολλαπλών γλωσσών]
-		[Libraries/ \ \ \ Χρήσιμες κλάσεις που δεν ταιριάζουν σε άλλη κατηγορία]
-		[Models/ \ \ \ \ \ \ Τα Models που διασυνδέουν την εφαρμογή με τη βάση δεδομένων]
-		[ThirdParty/ \ \ Βιβλιοθήκες τρίτων που μπορούν να χρησιμοποιηθούν στην εφαρμογή]
-		[Views/ \ \ \ \ \ \ \ Τα Views που συνθέτουν την HTML που εμφανίζεται στον πελάτη]
-	]
-\end{forest}
-}
+\begin{figure} 
+	\centering 
+	{\footnotesize
+	\begin{forest}
+		pic dir tree,
+		pic root,
+		for tree={% folder icons by default; override using file for file icons
+			directory,
+			fit=band
+		},
+		[app/
+			[Config/ \ \ \ \ \ \ Αρχεία ρύθμισης παραμέτρων της εφαρμογής]
+			[Controllers/ \ Οι Controllers που καθορίζουν τη ροή του προγράμματος]
+			[Database/ \ \ \ \ Κλάσεις για την ενημέρωση του σχήματος και την αρχικοποίηση βάσεων δεδομένων]
+			[Filters/ \ \ \ \ \ Κλάσεις φίλτρων που μπορούν να εκτελούνται πριν και μετά τους controllers]
+			[Helpers/ \ \ \ \ \ Συλλογές αυτόνομων βοηθητικών συναρτήσεων]
+			[Language/ \ \ \ \ Συμβολοσειρές γλώσσας για την υποστήριξη πολλαπλών γλωσσών]
+			[Libraries/ \ \ \ Χρήσιμες κλάσεις που δεν ταιριάζουν σε άλλη κατηγορία]
+			[Models/ \ \ \ \ \ \ Τα Models που διασυνδέουν την εφαρμογή με τη βάση δεδομένων]
+			[ThirdParty/ \ \ Βιβλιοθήκες τρίτων που μπορούν να χρησιμοποιηθούν στην εφαρμογή]
+			[Views/ \ \ \ \ \ \ \ Τα Views που συνθέτουν την HTML που εμφανίζεται στον πελάτη]
+		]
+	\end{forest}
+	}
+	\caption{Η βασική δομή του CodeIgniter 4 framework}
+	\label{dir:ci4}
+\end{figure}
 
 Στον κατάλογο app έχει δοθεί το php namespace `iBoot', έτσι ώστε τα ονόματα των αρχείων που βρίσκονται στους υποκαταλόγους του να μην συγκρούονται με ομοίως ονομαζόμενα αρχεία του Framework ή άλλων χρησιμοποιούμενων βιβλιοθηκών.
 
@@ -371,6 +376,257 @@ H \emph{Καταχώρηση Μενού iPXE} είναι πεδίο ελεύθε
 
 Η εγκατάσταση του framework έχει γίνει με τη βοήθεια του Composer, οπότε στην περίπτωσή μας, ο κατάλογος συστήματος βρίσκεται στη διαδρομή `vendor/codeigniter4/framework/system'.
 
+\FloatBarrier
+\subsection{Δομή Αρχείων iBoot}
+Τα αρχεία που έχουν δημιουργηθεί για τη λειτουργία της εφαρμογής και του Rest API της, τον καθορισμό της εμφάνισής της, αλλά και της επικοινωνίας της με τη βάση δεδομένων της, περιέχονται στον φάκελο \emph{app} και περιγράφονται αναλυτικά παρακάτω.
+
+\subsubsection{Controllers} \label{ui:app:controllers}
+Στον κατάλογο Controllers βρίσκονται οι ελεγκτές που είναι υπεύθυνοι για την επιχειρησιακή λογική της εφαρμογής. Τα περιεχόμενα του καταλόγου Controllers απεικονίζονται στο σχήμα \ref{dir:iBoot-Controllers}.
+
+\begin{figure} 
+	\centering 
+	{\footnotesize
+	\begin{forest}
+		pic dir tree,
+		pic root,
+		for tree={% folder icons by default; override using file for file icons
+			directory,
+			fit=band
+		},
+		[Controllers/ \ \ \ \ \ \ \ \ \ \ \ \ Αρχεία ελεγκτών υπεύθυνων για την επιχειρησιακή λογική της εφαρμογής
+			[Api/ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ελεγκτές του Rest API της εφαρμογής
+				[ApiLogViewer.php \ \ \ Η συνάρτηση προβολής και διαγραφής των αρχείων καταγραφής συμβάντων, file]
+				[BootMenu.php \ \ \ \ \ \ \ Οι CRUD συναρτήσεις των Μενού Εκκίνησης, file]
+				[BootMenuBlocks.php \ Οι CRUD συναρτήσεις των Μπλοκ iPXE των Μενού Εκκίνησης, file]
+				[Computer.php \ \ \ \ \ \ \ Οι CRUD συναρτήσεις των Υπολογιστών, file]
+				[Group.php \ \ \ \ \ \ \ \ \ \ Οι CRUD συναρτήσεις των Ομάδων, file]
+				[IpxeBlock.php \ \ \ \ \ \ Οι CRUD συναρτήσεις των Μπλοκ iPXE, file]
+				[Lab.php \ \ \ \ \ \ \ \ \ \ \ \ Οι CRUD συναρτήσεις των Εργαστηρίων, file]
+				[Schedule.php \ \ \ \ \ \ \ Οι CRUD συναρτήσεις των Χρονοδιαγραμμάτων, file]
+				[Swagger.php \ \ \ \ \ \ \ \ Ο ελεγκτής απεικόνισης της προδιαγραφής του Rest API, file]
+				[User.php \ \ \ \ \ \ \ \ \ \ \ Οι CRUD συναρτήσεις των Χρηστών, file]
+			]
+			[BaseController.php \ \ \ \ Ο βασικός ελεγκτής τον οποίο επεκτείνουν οι υπόλοιποι, file]
+			[BootMenu.php \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Μενού Εκκίνησης, file]
+			[Computers.php \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Υπολογιστών, file]
+			[Dashboard.php \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής της αρχικής σελίδας, file]
+			[Groups.php \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Ομάδων, file]
+			[Home.php \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής αρχικής ανακατεύθυνσης και προβολής των σελίδων εκκίνησης, file]
+			[IpxeBlocks.php \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Μπλοκ iPXE, file]
+			[Labs.php \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Εργαστηρίων, file]
+			[Locale.php \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής αλλαγής γλώσσας, file]
+			[LogViewer.php \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των αρχείων καταγραφής συμβάντων, file]
+			[Schedules.php \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Χρονοδιαγραμμάτων, file]
+			[User.php \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Χρηστών, file]
+		]
+	\end{forest}
+	}
+	\caption{Τα αρχεία του καταλόγου Controllers του iBoot}
+	\label{dir:iBoot-Controllers}
+\end{figure}
+
+\subsubsection{Database} \label{ui:app:database}
+Στον κατάλογο Database βρίσκονται τα αρχεία υπεύθυνα για τον καθορισμό του σχήματος της βάσης δεδομένων και της αρχικοποίησης δεδομένων, αν αυτό χρειάζεται. Τα περιεχόμενα του καταλόγου Database απεικονίζονται στο σχήμα \ref{dir:iBoot-Database}.
+
+\begin{figure} 
+\centering 
+{\footnotesize
+	\begin{forest}
+		pic dir tree,
+		pic root,
+		for tree={% folder icons by default; override using file for file icons
+			directory,
+			fit=band
+		},
+		[Database/ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Κλάσεις σχεδιασμού και αρχικοποίησης της βάσης δεδομένων
+			[Migrations/ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Κλάσεις ενημέρωσης του σχήματος της βάσης δεδομένων
+				[2022-06-27-172100\_InitDB.php \ Κατασκευάζει το σχήμα της βάσης δεδομένων, file]
+			]
+			[Seeds/ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Κλάσεις αρχικοποίησης τη βάση δεδομένων με εγγραφές]
+		]
+	\end{forest}
+}
+\caption{Τα αρχεία του καταλόγου Database του iBoot}
+\label{dir:iBoot-Database}
+\end{figure}
+
+\subsubsection{Entities} \label{ui:app:entities}
+Στον κατάλογο Entities βρίσκονται οι κλάσεις οντοτήτων της εφαρμογής. Οι οντότητες λειτουργούν σαν στιγμιότυπα γραμμών της βάσης δεδομένων, οπότε λειτουργικά παρεμβάλλονται μεταξύ των μοντέλων και της απεικόνισης πληροφορίας στην εφαρμογή. Εκτός από τα δεδομένα που επιστρέφονται από την αντίστοιχη γραμμή της βάσης δεδομένων, μια οντότητα περιέχει και όλες τις απαραίτητες συναρτήσεις για Τα περιεχόμενα του καταλόγου Entities απεικονίζονται στο σχήμα \ref{dir:iBoot-Entities}.
+
+\begin{figure} 
+\centering 
+{\footnotesize
+	\begin{forest}
+		pic dir tree,
+		pic root,
+		for tree={% folder icons by default; override using file for file icons
+			directory,
+			fit=band
+		},
+		[Entities/ \ \ \ \ \ \ \ \ \ \ \ \ Κλάσεις οντοτήτων της εφαρμογής
+			[BootMenu.php \ \ \ \ \ \ \ Η οντότητα των Μενού Εκκίνησης, file]
+			[BootMenuBlocks.php \ Η οντότητα των Μπλοκ iPXE των Μενού Εκκίνησης, file]
+			[Computer.php \ \ \ \ \ \ \ Η οντότητα των Υπολογιστών, file]
+			[Group.php \ \ \ \ \ \ \ \ \ \ Η οντότητα των Ομάδων, file]
+			[IpxeBlock.php \ \ \ \ \ \ Η οντότητα των Μπλοκ iPXE, file]
+			[Lab.php \ \ \ \ \ \ \ \ \ \ \ \ Η οντότητα των Εργαστηρίων, file]
+			[Schedule.php \ \ \ \ \ \ \ Η οντότητα των Χρονοδιαγραμμάτων, file]
+			[User.php \ \ \ \ \ \ \ \ \ \ \ Η οντότητα των Χρηστών, file]
+		]
+	\end{forest}
+}
+\caption{Τα αρχεία του καταλόγου Entities του iBoot}
+\label{dir:iBoot-Entities}
+\end{figure}
+
+\subsubsection{Filters} \label{ui:app:filters}
+Στον κατάλογο Filters βρίσκονται συναρτήσεις φίλτρων που εκτελούνται ακριβώς πριν ή μετά από εκτέλεση συναρτήσεων ελεγκτών. Αυτές οι συναρτήσεις μπορούν να αλλάξουν τη συμπεριφορά του ελεγκτή, να προσθέσουν ή να επιβεβαιώσουν την ύπαρξη πληροφοριών και να αλλάξουν τη ροή εκτέλεσης εφόσον αυτό είναι απαραίτητο. Τα περιεχόμενα του καταλόγου Filters απεικονίζονται στο σχήμα \ref{dir:iBoot-Filters}.
+
+\begin{figure} 
+\centering 
+{\footnotesize
+	\begin{forest}
+		pic dir tree,
+		pic root,
+		for tree={% folder icons by default; override using file for file icons
+			directory,
+			fit=band
+		},
+		[Filters/ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Αρχεία συναρτήσεων φίλτρων υπεύθυνων για την αλλαγή της ροής εκτέλεσης
+			[ApiAuth.php \ \ \ \ \ \ \ \ \ \ Φίλτρο για τον έλεγχο αυθεντικοποίησης αιτήματος προς το Rest API, file]
+			[Auth.php \ \ \ \ \ \ \ \ \ \ \ \ \ Φίλτρο για τον έλεγχο αυθεντικοποίησης χρήστη στην εφαρμογή, file]
+			[Locale.php \ \ \ \ \ \ \ \ \ \ \ Φίλτρο για την αλλαγή γλώσσας της εφαρμογής, file]
+			[NoAuth.php \ \ \ \ \ \ \ \ \ \ \ Φίλτρο για την επιβολή μη αυθεντικοποίησης χρήστη στην εφαρμογή, file]
+			[RefreshUserToken.php \ Φίλτρο για την αναγέννηση του token αυθεντικοποίησης του χρήστη, file]
+		]
+	\end{forest}
+}
+\caption{Τα αρχεία του καταλόγου Filters του iBoot}
+\label{dir:iBoot-Filters}
+\end{figure}
+
+\subsubsection{Language} \label{ui:app:language}
+Στον κατάλογο Language βρίσκονται οι ελεγκτές που είναι υπεύθυνοι για την επιχειρησιακή λογική της εφαρμογής. Τα περιεχόμενα του καταλόγου Controllers απεικονίζονται στο σχήμα \ref{dir:iBoot-Language}.
+
+\begin{figure} 
+\centering 
+{\footnotesize
+	\begin{forest}
+		pic dir tree,
+		pic root,
+		for tree={% folder icons by default; override using file for file icons
+			directory,
+			fit=band
+		},
+		[Language/ \ \ \ \ \ \ \ \ \ \ \ Αρχεία ελεγκτών υπεύθυνων για την επιχειρησιακή λογική της εφαρμογής
+			[el/ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Οι ελληνικές μεταφράσεις λεκτικών της εφαρμογής
+				[Error.php \ \ \ \ \ \ Οι ελληνικές μεταφράσεις λεκτικών σφαλμάτων, file]
+				[Text.php \ \ \ \ \ \ \ Οι ελληνικές μεταφράσεις λεκτικών γενικού κειμένου, file]
+				[Validation.php \ Οι ελληνικές μεταφράσεις λεκτικών επαλήθευσης, file]
+			]
+			[en/ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Οι αγγλικές μεταφράσεις λεκτικών της εφαρμογής
+				[Error.php \ \ \ \ \ \ Οι αγγλικές μεταφράσεις λεκτικών σφαλμάτων, file]
+				[Text.php \ \ \ \ \ \ \ Οι αγγλικές μεταφράσεις λεκτικών γενικού κειμένου, file]
+				[Validation.php \ Οι αγγλικές μεταφράσεις λεκτικών επαλήθευσης, file]
+			]
+		]
+	\end{forest}
+}
+\caption{Τα αρχεία του καταλόγου Language του iBoot}
+\label{dir:iBoot-Language}
+\end{figure}
+
+\subsubsection{Models} \label{ui:app:models}
+Στον κατάλογο Models βρίσκονται οι ελεγκτές που είναι υπεύθυνοι για την επιχειρησιακή λογική της εφαρμογής. Τα περιεχόμενα του καταλόγου Controllers απεικονίζονται στο σχήμα \ref{dir:iBoot-Models}.
+
+\begin{figure} 
+\centering 
+{\footnotesize
+	\begin{forest}
+		pic dir tree,
+		pic root,
+		for tree={% folder icons by default; override using file for file icons
+			directory,
+			fit=band
+		},
+		[Models/ \ \ \ \ \ \ \ \ \ \ \ Αρχεία ελεγκτών υπεύθυνων για την επιχειρησιακή λογική της εφαρμογής
+			[BaseController.php \ \ \ Ο βασικός ελεγκτής τον οποίο επεκτείνουν οι υπόλοιποι, file]
+			[BootMenu.php \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Μενού Εκκίνησης, file]
+			[Computers.php \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Υπολογιστών, file]
+			[Dashboard.php \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής της αρχικής σελίδας, file]
+			[Groups.php \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Ομάδων, file]
+			[Home.php \ \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής αρχικής ανακατεύθυνσης και προβολής των σελίδων εκκίνησης, file]
+			[IpxeBlocks.php \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Μπλοκ iPXE, file]
+			[Labs.php \ \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Εργαστηρίων, file]
+			[Locale.php \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής αλλαγής γλώσσας, file]
+			[LogViewer.php \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των αρχείων καταγραφής συμβάντων, file]
+			[Schedules.php \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Χρονοδιαγραμμάτων, file]
+			[User.php \ \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Χρηστών, file]
+		]
+	\end{forest}
+}
+\caption{Τα αρχεία του καταλόγου Models του iBoot}
+\label{dir:iBoot-Models}
+\end{figure}
+
+\subsubsection{Validation} \label{ui:app:validation}
+Στον κατάλογο Validation βρίσκονται οι ελεγκτές που είναι υπεύθυνοι για την επιχειρησιακή λογική της εφαρμογής. Τα περιεχόμενα του καταλόγου Controllers απεικονίζονται στο σχήμα \ref{dir:iBoot-Validation}.
+
+\begin{figure} 
+\centering 
+{\footnotesize
+	\begin{forest}
+		pic dir tree,
+		pic root,
+		for tree={% folder icons by default; override using file for file icons
+			directory,
+			fit=band
+		},
+		[Validation/ \ \ \ \ \ \ \ \ \ \ \ Αρχεία ελεγκτών υπεύθυνων για την επιχειρησιακή λογική της εφαρμογής
+			[ComputerRules.php \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Χρονοδιαγραμμάτων, file]
+			[UserRules.php \ \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Χρηστών, file]
+		]
+	\end{forest}
+}
+\caption{Τα αρχεία του καταλόγου Validation του iBoot}
+\label{dir:iBoot-Validation}
+\end{figure}
+
+\subsubsection{Views} \label{ui:app:views}
+Στον κατάλογο Views βρίσκονται οι ελεγκτές που είναι υπεύθυνοι για την επιχειρησιακή λογική της εφαρμογής. Τα περιεχόμενα του καταλόγου Controllers απεικονίζονται στο σχήμα \ref{dir:iBoot-Views}.
+
+\begin{figure} 
+	\centering 
+	{\footnotesize
+		\begin{forest}
+			pic dir tree,
+			pic root,
+			for tree={% folder icons by default; override using file for file icons
+				directory,
+				fit=band
+			},
+			[Views/ \ \ \ \ \ \ \ \ \ \ \ Αρχεία ελεγκτών υπεύθυνων για την επιχειρησιακή λογική της εφαρμογής
+				[BaseController.php \ \ \ Ο βασικός ελεγκτής τον οποίο επεκτείνουν οι υπόλοιποι, file]
+				[BootMenu.php \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Μενού Εκκίνησης, file]
+				[Computers.php \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Υπολογιστών, file]
+				[Dashboard.php \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής της αρχικής σελίδας, file]
+				[Groups.php \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Ομάδων, file]
+				[Home.php \ \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής αρχικής ανακατεύθυνσης και προβολής των σελίδων εκκίνησης, file]
+				[IpxeBlocks.php \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Μπλοκ iPXE, file]
+				[Labs.php \ \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Εργαστηρίων, file]
+				[Locale.php \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής αλλαγής γλώσσας, file]
+				[LogViewer.php \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των αρχείων καταγραφής συμβάντων, file]
+				[Schedules.php \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Χρονοδιαγραμμάτων, file]
+				[User.php \ \ \ \ \ \ \ \ \ \ \ \ \ Ο ελεγκτής προβολής των Χρηστών, file]
+			]
+		\end{forest}
+	}
+	\caption{Τα αρχεία του καταλόγου Views του iBoot}
+	\label{dir:iBoot-Views}
+\end{figure}
+
+
+\FloatBarrier
 \section{Ασφάλεια Συστήματος}
 Η ασφάλεια των εφαρμογών ιστού είναι ζωτικής σημασίας επειδή οι εφαρμογές ιστού αποτελούν συχνά τον πρωταρχικό στόχο των επιτιθέμενων που επιδιώκουν να αποκτήσουν μη εξουσιοδοτημένη πρόσβαση σε ευαίσθητες πληροφορίες ή να θέσουν σε κίνδυνο τα συστήματα ενός οργανισμού. Για την διασφάλιση της ακαιρεότητας της εφαρμογής και των δεδομένων της, την προστασία της ιδιωτικότητας του κάθε χρήστη της και την εξασφάλιση της εύρυθμης και απρόσκοπτης λειτουργίας της, έχουν αξιοποιηθεί οι πρακτικές ασφαλείας που περιγράφονται παρακάτω.
 
