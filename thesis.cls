@@ -29,6 +29,10 @@
 % TABLE FLOATING
 \usepackage{placeins}
 
+% Description list bulleted
+\usepackage{enumitem}
+\setlist[description]{font=\textbullet\space}
+
 % xelatex wants fontspec
 \usepackage{fontspec}
 \usepackage{xltxtra}
