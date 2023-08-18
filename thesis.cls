@@ -199,16 +199,6 @@
 % Clear the header and footer
 \fancyhf{}
 
-% Set the right side of the footer to be the page number
-\fancyfoot[R]{\thepage}
-
-% set page number appearance to bottom right
-\fancypagestyle{plain}{%
-	\renewcommand{\headrulewidth}{0pt}
-	\fancyhf{}
-	\fancyfoot[R]{\thepage}%
-}
-
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 % change the word 'Alrogithm' in caption to Αλγόριθμος
