@@ -1,5 +1,11 @@
 \chapter*{Abstract}
-Abstract in English...
+Network booting, abbreviated as netboot, is the process of starting up a computer from a network rather than a local storage device. This technique is often used by routers, diskless workstations, and centrally managed computers, such as those found in businesses, public libraries, and educational institutions. Network booting enables centralized management of disk storage, which can potentially result in reduced capital and maintenance costs. It can also be beneficial in clustered computing environments, where local disks may be absent on nodes.
+
+The purpose of this diploma thesis is to assist laboratory administrators at the University of Western Macedonia's Laboratory of Digital Systems and Computer Architecture in managing the available iPXE blocks and boot menus, as well as the time schedule allowed for lab computers' network booting.
+
+The thesis describes the design and development of a web-based administration platform for computer network booting. The platform aims to assist administrators in grouping the laboratory's computers and effectively manage each group's booting schedule. Administrators create boot menu entries in the platform. These entries are comprised of reusable iPXE blocks that computer groups can provide to their members at boot time. Ultimately, each computer booted is provided with a dynamically generated boot menu that is tailored to the active schedule for the computer's group membership and the current date and time. Finally, the platform provides usage logs and facilitates administrators' monitoring of active computer systems in the lab.
+
+The platform was created using cutting-edge software technology, innovative programming methods, and open-source programming languages. The programming for the platform's back-end and REST API used PHP with support from the CodeIgniter 4 Framework. The front-end, on the other hand, utilized HTML, CSS, JavaScript, and Bootstrap. Regarding the used programming techniques, the back-end was developed following the Object-Oriented Programming standards of the MVC design. The front-end, in turn, adhered to Responsive design principles. The platform stores its data in a MySQL relational database and its REST API endpoints were documented and visualized using OpenAPI Swagger. JetBrains PHPStorm and Axosoft GitKraken were the utilized development tools.
 
 % put this on the bottom
 \vfill
