@@ -40,6 +40,8 @@
 \defaultfontfeatures{Ligatures=TeX}
 \usepackage{xunicode}
 \usepackage{tinos}
+% pifont for the checkmarks
+\usepackage{pifont}
 % package allows to place figures
 \usepackage{graphicx}
 \graphicspath{{Figures/}{./}} % Specifies where to look for included images
