@@ -29,14 +29,11 @@
 		\end{doublespacing}
 	\end{center}
 	% insert blank page after title page
-	\newpage
-	\thispagestyle{empty}
-	\mbox{}
+	\cleardoublepage
 \end{titlepage}
 
 \selectlanguage{english}
 \begin{titlepage}
-	\setcounter{page}{3}
 	\begin{center}
 		\begin{figure}[h]
 			\centering \includegraphics[scale=0.25]{ece.png}
@@ -64,10 +61,11 @@
 		\end{doublespacing}
 	\end{center}
 	% insert blank page after title page
-	\newpage
-	\thispagestyle{empty}
-	\mbox{}
+	\cleardoublepage
 \end{titlepage}
+
+% set margins for content
+\newgeometry{inner=2cm, outer=3cm, top=2.5cm, bottom=2.5cm}
 
 \selectlanguage{greek}
 
@@ -93,17 +91,13 @@
 \listoffigures
 \clearpage
 
-% insert list of algorithms
-%\listofalgorithms
-%\clearpage
-
 % insert list of tables
 \listoftables
 \clearpage
 
 % insert list of listings
 \lstlistoflistings
-\clearpage
+\cleardoublepage
 
 \pagenumbering{arabic}
 

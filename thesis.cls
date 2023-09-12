@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{thesis}[2022/07/01 My thesis class]
+\ProvidesClass{thesis}[2023/09/12 My thesis class]
 
-\LoadClass{report}
+\LoadClass[a4paper,twoside,openright,final]{report}
 
 % TEXT FORMATTING
 % set spacing between lines (διάστιχο)
@@ -21,6 +21,9 @@
 \titleformat{\subsection}
 {\bfseries\normalsize}{\thesubsection}{12pt}{}
 \usepackage[a4paper]{geometry}
+
+% avoid numeration on empty pages
+\usepackage{emptypage}
 
 % TABLE CELL PADDING
 \setlength{\tabcolsep}{0.5em} % for the horizontal padding
